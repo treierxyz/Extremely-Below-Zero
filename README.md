@@ -1,2 +1,2 @@
-# super-duper-game
+# Extremely-Below-Zero
 TTG Arvutimängud kursuse tiimiprojekt
