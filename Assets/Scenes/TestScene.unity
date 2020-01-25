@@ -293,6 +293,9 @@ MonoBehaviour:
   jumpHeight: 60
   groundTest: {fileID: 840412942}
   checkRadius: 0.75
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!50 &1318476359
 Rigidbody2D:
   serializedVersion: 4

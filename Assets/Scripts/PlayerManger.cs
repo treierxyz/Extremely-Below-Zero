@@ -14,6 +14,7 @@ public class PlayerManger : MonoBehaviour
     private bool isGrounded;
     public Transform groundTest;
     public float checkRadius;
+    public LayerMask ground;
 
     void Start()
     {
@@ -36,7 +37,7 @@ public class PlayerManger : MonoBehaviour
             sr.flipX = true;
         }
         // Jumping
-        isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius);
+        isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
     }
     void Update()
     {
