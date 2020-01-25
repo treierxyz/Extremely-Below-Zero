@@ -41,7 +41,7 @@ public class PlayerManger : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)  && isGrounded == true)
         {
             rb.AddForce(jumpHeight * transform.up, ForceMode2D.Impulse);
             isGrounded = false;
