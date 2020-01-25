@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     //public GameObject shotEffect;
     public Transform shotPoint;
     public float clipSize;
-    private float clipSizeReal;
+    public float clipSizeReal;
     public float reloadTime;
     private float reloadTimeHidden;
     private float timeBtwShots;
