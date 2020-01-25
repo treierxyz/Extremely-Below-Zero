@@ -640,6 +640,8 @@ MonoBehaviour:
   projectile: {fileID: 8985430833513000874, guid: 216cf6028f4416d47935fb57a7bbd6f1,
     type: 3}
   shotPoint: {fileID: 2122642583}
+  clipSize: 20
+  reloadTime: 4
   startTimeBtwShots: 0.4
 --- !u!1 &1536711092
 GameObject:
