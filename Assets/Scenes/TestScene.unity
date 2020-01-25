@@ -1517,6 +1517,7 @@ MonoBehaviour:
     type: 3}
   shotPoint: {fileID: 2122642583}
   clipSize: 20
+  clipSizeReal: 0
   reloadTime: 1
   startTimeBtwShots: 0.1
 --- !u!1 &1536711092
