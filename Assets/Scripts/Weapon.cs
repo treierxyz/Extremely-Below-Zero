@@ -10,9 +10,10 @@ public class Weapon : MonoBehaviour
     public float clipSize;
     public float clipSizeReal;
     public float reloadTime;
-    private float reloadTimeHidden;
+    public float reloadTimeHidden;
     private float timeBtwShots;
     public float startTimeBtwShots;
+    public bool isReloading;
     private void Start()
     {
         clipSizeReal = clipSize;
@@ -41,11 +42,13 @@ public class Weapon : MonoBehaviour
         {
             if(reloadTimeHidden <= 0)
             {
+                isReloading = false;
                 clipSizeReal = clipSize;
                 reloadTimeHidden = reloadTime;
             }
             else
             {
+                isReloading = true;
                 reloadTimeHidden -= Time.fixedDeltaTime;
             }
             

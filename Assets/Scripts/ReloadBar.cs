@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ReloadBar : MonoBehaviour
 {
     public Slider slider;
-
+    public GameObject reloadingBar;
+    private Weapon Reloading;
     private float currentValue = 0f;
     public float CurrentValue {
     get {
@@ -17,6 +18,10 @@ public class ReloadBar : MonoBehaviour
         slider.value = currentValue;
     }
 }
+    void Awake()
+    {
+        Reloading = GameObject.FindObjectOfType<Weapon>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,17 @@ public class ReloadBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentValue += 0.0043f;
+        if(Reloading.isReloading)
+        {
+            reloadingBar.SetActive(true);
+            Debug.Log("Reloading");
+            CurrentValue = -(Reloading.reloadTimeHidden / Reloading.reloadTime);
+        } 
+        else
+        {
+            reloadingBar.SetActive(false);
+            Debug.Log("Not reloading");
+            CurrentValue = Reloading.reloadTime;
+        }
     }
 }
