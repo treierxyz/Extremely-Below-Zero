@@ -43,8 +43,12 @@ public class PlayerManger : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true || Input.GetKeyDown(KeyCode.W) && isGrounded == true || Input.GetKeyDown(KeyCode.UpArrow) && isGrounded == true)
         {
-            rb.AddForce(jumpHeight * transform.up, ForceMode2D.Impulse);
-            isGrounded = false;
+            if(PauseMenu.GameIsPaused == false)
+            {
+                rb.AddForce(jumpHeight * transform.up, ForceMode2D.Impulse);
+                isGrounded = false;
+            }
+            
         }
     }
 }
