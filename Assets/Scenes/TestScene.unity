@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpHeight: 60
+  jumpHeight: 80
   groundTest: {fileID: 840412942}
   checkRadius: 0.75
   ground:
