@@ -1,5 +1,5 @@
 # Extremely-Below-Zero
-Extremely Below Zero is a 2D pixel-art platformer where you get to manipulate time.
+**Extremely Below Zero** is a 2D pixel-art platformer where you get to manipulate time.
 
 The game will be available to play in your browser using HTML5 and downloadable as executable binaries.
 
