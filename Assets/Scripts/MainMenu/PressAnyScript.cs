@@ -20,12 +20,13 @@ public class PressAnyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKey)
+        if(Input.anyKey && !toggle)
         {
             pressed = true;
             pressAny.SetActive(false);
             buttons.SetActive(true);
             animatorT.SetTrigger("transition");
+            toggle = true;
         }
     }
 }
