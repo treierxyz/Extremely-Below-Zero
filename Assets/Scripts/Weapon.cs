@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
         reloadTimeHidden = reloadTime;
         isReloading = false;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if(clipSizeReal > 0)
         {
@@ -38,6 +38,10 @@ public class Weapon : MonoBehaviour
                 if (!Input.GetMouseButton(0))
                 {
                     isMBHeld = false;
+                }
+                if (Input.GetKeyDown(KeyCode.R) && clipSizeReal != clipSize)
+                {
+                    clipSizeReal = 0;
                 }
             }
             else

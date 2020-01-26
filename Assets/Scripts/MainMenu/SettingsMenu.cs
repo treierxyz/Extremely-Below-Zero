@@ -13,8 +13,8 @@ public class SettingsMenu : MonoBehaviour
     public GameObject soundFill;
     private Slider musSlider;
     private Slider sfxSlider;
-    public float musicVolume = 0.0f;
-    public float soundVolume = 0.0f;
+    private float musicVolume = 0.0f;
+    private float soundVolume = 0.0f;
     // Start is called before the first frame update
     void Awake()
     {
