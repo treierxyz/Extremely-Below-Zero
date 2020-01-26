@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
+    //TODO Add arm flip, remove turn on key press, use mouse to turn around
     private SpriteRenderer sr;
     public GameObject rotated;
     void Start()
