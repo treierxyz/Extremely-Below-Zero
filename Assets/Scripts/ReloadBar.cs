@@ -7,7 +7,8 @@ public class ReloadBar : MonoBehaviour
 {
     public Slider slider;
     public GameObject reloadingBar;
-    private Weapon Reloading;
+    public GameObject arm;
+    private Weapon reloadingStat;
     private float currentValue = 0f;
     public float CurrentValue {
     get {
@@ -18,30 +19,25 @@ public class ReloadBar : MonoBehaviour
         slider.value = currentValue;
     }
 }
-    void Awake()
-    {
-        Reloading = GameObject.FindObjectOfType<Weapon>();
-    }
     // Start is called before the first frame update
     void Start()
     {
+        reloadingStat = arm.GetComponent<Weapon>();
         CurrentValue = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Reloading.isReloading)
+        if(reloadingStat.isReloading == true)
         {
-            reloadingBar.SetActive(true);
-            Debug.Log("Reloading");
-            CurrentValue = -(Reloading.reloadTimeHidden / Reloading.reloadTime);
+            //reloadingBar.SetActive(true);
+            CurrentValue = 1-(reloadingStat.reloadTimeHidden/reloadingStat.reloadTime);
         } 
         else
         {
-            reloadingBar.SetActive(false);
-            Debug.Log("Not reloading");
-            CurrentValue = Reloading.reloadTime;
+            //reloadingBar.SetActive(false);
+            CurrentValue = reloadingStat.clipSizeReal/reloadingStat.clipSize;
         }
     }
 }

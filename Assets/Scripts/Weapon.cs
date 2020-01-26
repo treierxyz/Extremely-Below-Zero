@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     {
         clipSizeReal = clipSize;
         reloadTimeHidden = reloadTime;
+        isReloading = false;
     }
     private void FixedUpdate()
     {
