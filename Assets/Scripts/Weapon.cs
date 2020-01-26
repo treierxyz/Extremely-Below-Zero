@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     public bool isReloading;
+    private bool isMBHeld;
     private void Start()
     {
         clipSizeReal = clipSize;
@@ -26,18 +27,24 @@ public class Weapon : MonoBehaviour
         {
             if (timeBtwShots <= 0)
             {
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && !isMBHeld)
                 {
                     //Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
                     Instantiate(projectile, shotPoint.position, transform.rotation);
                     timeBtwShots = startTimeBtwShots;
                     clipSizeReal -= 1;
+                    isMBHeld = true;
+                }
+                if (!Input.GetMouseButton(0))
+                {
+                    isMBHeld = false;
                 }
             }
-            else 
+            else
             {
                 timeBtwShots -= Time.fixedDeltaTime;
             }
+
         }
         else
         {
