@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
     public float startTimeBtwShots;
     public bool isReloading;
     private bool isMBHeld;
+    public bool machineGunMode = false;
     private void Start()
     {
         clipSizeReal = clipSize;
@@ -33,7 +34,10 @@ public class Weapon : MonoBehaviour
                     Instantiate(projectile, shotPoint.position, transform.rotation);
                     timeBtwShots = startTimeBtwShots;
                     clipSizeReal -= 1;
-                    isMBHeld = true;
+                    if (!machineGunMode)
+                    {
+                        isMBHeld = true;
+                    }
                 }
                 if (!Input.GetMouseButton(0))
                 {
