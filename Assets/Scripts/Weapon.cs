@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -65,5 +65,13 @@ public class Weapon : MonoBehaviour
             }
             
         }
+		if(Input.GetKeyDown(KeyCode.E))
+		{
+			Time.timeScale = 0.5f;
+		}
+		else
+		{
+			Time.timeScale = 1f;
+		}
     }
 }
