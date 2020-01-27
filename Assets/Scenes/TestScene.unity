@@ -1808,6 +1808,7 @@ GameObject:
   - component: {fileID: 1318476359}
   - component: {fileID: 1318476358}
   - component: {fileID: 1318476363}
+  - component: {fileID: 1318476364}
   m_Layer: 0
   m_Name: MainCAR
   m_TagString: Untagged
@@ -1954,6 +1955,25 @@ MonoBehaviour:
   music: {fileID: 572277428}
   slowDownAmount: 0.5
   isSlowTime: 0
+--- !u!95 &1318476364
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318476357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0dd9b7c879e6842949bad97e3588cfa1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1358846530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9d745490bab818db2fa3a08577305a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 572277428}
+  audioSourceObject: {fileID: 572277428}
   pauseMenuUI: {fileID: 402383549}
   mainCharacter: {fileID: 1318476357}
 --- !u!1 &1866656910

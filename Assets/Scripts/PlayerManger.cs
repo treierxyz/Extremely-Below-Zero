@@ -18,9 +18,11 @@ public class PlayerManger : MonoBehaviour
     public float checkRadius;
     public LayerMask ground;
     public GameObject arm;
+    private Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         sr2 = arm.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -31,6 +33,15 @@ public class PlayerManger : MonoBehaviour
         // Normal movement
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        //Animations speed
+        if (rb.velocity.x < 0)
+        {
+            animator.SetFloat("speed", -rb.velocity.x);
+        }
+        else if (rb.velocity.x > 0)
+        {
+            animator.SetFloat("speed", rb.velocity.x);
+        }
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         // Flips players sprite
         if(difference.x > 0)
