@@ -27,4 +27,8 @@ public class PressAnyScript : MonoBehaviour
             animatorT.SetTrigger("transition");
         }
     }
+    public void TriggerTitle()
+    {
+        animatorT.SetTrigger("transition");
+    }
 }

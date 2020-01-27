@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject audio;
+    public GameObject audioSourceObject;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject mainCharacter;
@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     void Awake()
     {
         slowTime = mainCharacter.GetComponent<SlowTime>();
-        audioSource = audio.GetComponent<AudioSource>();
+        audioSource = audioSourceObject.GetComponent<AudioSource>();
     }
     void Update()
     {
