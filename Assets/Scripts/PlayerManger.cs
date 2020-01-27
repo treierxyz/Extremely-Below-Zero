@@ -10,16 +10,19 @@ public class PlayerManger : MonoBehaviour
     private Rigidbody2D rb;
     // For flipping the sprite
     private SpriteRenderer sr;
+    private SpriteRenderer sr2;
     // Jumping
     public float jumpHeight;
     private bool isGrounded;
     public Transform groundTest;
     public float checkRadius;
     public LayerMask ground;
+    public GameObject arm;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        sr2 = arm.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -28,14 +31,17 @@ public class PlayerManger : MonoBehaviour
         // Normal movement
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         // Flips players sprite
-        if(moveInput > 0)
+        if(difference.x > 0)
         {
             sr.flipX = false;
+            sr2.flipX = false;
         } 
-        else if(moveInput < 0)
+        else if(difference.x < 0)
         {
             sr.flipX = true;
+            sr2.flipX = true;
         }
         // Jumping
         isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
