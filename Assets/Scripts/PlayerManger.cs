@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerManger : MonoBehaviour
 {
-	//TODO Add arm flip, remove turn on key press, use mouse to turn around
     public float speed;
     private float moveInput;
     private Rigidbody2D rb;
