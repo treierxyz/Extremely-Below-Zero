@@ -65,13 +65,5 @@ public class Weapon : MonoBehaviour
             }
             
         }
-		if(Input.GetKeyDown(KeyCode.E))
-		{
-			Time.timeScale = 0.5f;
-		}
-		else
-		{
-			Time.timeScale = 1f;
-		}
-    }
+	}
 }
