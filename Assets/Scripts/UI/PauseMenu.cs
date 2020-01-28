@@ -13,11 +13,13 @@ public class PauseMenu : MonoBehaviour
     private AudioSource audioSource;
     private float previousTime;
     private float previousMusic;
+    private float fixedDeltaTime;
     // Update is called once per frame
     void Awake()
     {
         slowTime = mainCharacter.GetComponent<SlowTime>();
         audioSource = audioSourceObject.GetComponent<AudioSource>();
+        this.fixedDeltaTime = Time.fixedDeltaTime;
     }
     void Update()
     {
@@ -65,8 +67,12 @@ public class PauseMenu : MonoBehaviour
     }
     public void QuitToMenu()
     {
-        Debug.Log("Quitting");
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
         Time.timeScale = 1f;
+        GameIsPaused = false;
+        audioSource.pitch = 1f;
+        pauseMenuUI.SetActive(false);
+        slowTime.isSlowTime = false;
+        Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }

@@ -16,6 +16,6 @@ public class AmmoCounter : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        ammoDisplay.text = "Ammo: "+(WeaponClip.clipSize).ToString() + "/" + (WeaponClip.clipSizeReal).ToString();
+        ammoDisplay.text = (WeaponClip.clipSize).ToString() + "/" + (WeaponClip.clipSizeReal).ToString();
     }
 }
