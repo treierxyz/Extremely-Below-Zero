@@ -24,11 +24,11 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
         posDif = player.transform.position.x - transform.position.x;
-        if(posDif >= 5 || posDif < 0 && posDif > -2)
+        if(posDif >= 5 || posDif < 0 && posDif > -2.5)
         {
             rb.velocity = new Vector2(1 * enemySpeed, rb.velocity.y);
         }
-        if(posDif <= -5 || posDif > 0 && posDif < 2)
+        if(posDif <= -5 || posDif > 0 && posDif < 2.5)
         {
             rb.velocity = new Vector2(-1 * enemySpeed, rb.velocity.y);
         }

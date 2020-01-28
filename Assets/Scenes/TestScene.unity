@@ -823,9 +823,9 @@ GameObject:
   - component: {fileID: 790971044}
   - component: {fileID: 790971043}
   - component: {fileID: 790971045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: businessBODY
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f3569ac88659446b2f5749d89b0f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   player: {fileID: 1318476357}
   enemySpeed: 5
 --- !u!1 &828961895
@@ -1011,6 +1011,36 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 1318476362}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &854082615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854082616}
+  m_Layer: 0
+  m_Name: BulletSpawnerEnemy
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &854082616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854082615}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: -0.05, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 984753023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &908300953
@@ -1308,6 +1338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984753023}
   - component: {fileID: 984753024}
+  - component: {fileID: 984753025}
   m_Layer: 0
   m_Name: businessHAND
   m_TagString: Untagged
@@ -1325,7 +1356,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.05, y: -0.2, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 854082616}
   m_Father: {fileID: 1463422282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1379,6 +1411,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &984753025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984753022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d4c054b395ca24a832c4d171b999f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5942368837470828026, guid: a1c716f299df3c047b2404f81c6db4e3,
+    type: 3}
+  shotPoint: {fileID: 854082616}
+  clipSize: 10
+  reloadTime: 3
+  startTimeBtwShots: 1
 --- !u!1 &1025154096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,9 +1935,9 @@ GameObject:
   - component: {fileID: 1318476358}
   - component: {fileID: 1318476363}
   - component: {fileID: 1318476364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MainCAR
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1912,6 +1962,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   arm: {fileID: 1358846530}
+  health: 10
 --- !u!50 &1318476359
 Rigidbody2D:
   serializedVersion: 4

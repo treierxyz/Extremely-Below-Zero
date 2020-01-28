@@ -20,6 +20,8 @@ public class PlayerManger : MonoBehaviour
     public GameObject arm;
     private Animator animator;
 
+    public float health;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -30,6 +32,11 @@ public class PlayerManger : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (health <= 0) 
+        {
+            //Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
         // Normal movement
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
@@ -68,5 +75,10 @@ public class PlayerManger : MonoBehaviour
             }
             
         }
+    }
+    public void TakeDamage(int damage) 
+    {
+        //Instantiate(explosion, transform.position, Quaternion.identity);
+        health -= damage;
     }
 }
