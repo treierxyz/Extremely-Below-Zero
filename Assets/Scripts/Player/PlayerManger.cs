@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerManger : MonoBehaviour
 {
-	//TODO Add arm flip, remove turn on key press, use mouse to turn around
     public float speed;
+    public float speedslow;
+    public float movespeed;
     private float moveInput;
     private Rigidbody2D rb;
     // For flipping the sprite
@@ -20,6 +21,7 @@ public class PlayerManger : MonoBehaviour
     public GameObject arm;
     private Animator animator;
 
+    public float healthStart;
     public float health;
 
     void Start()
@@ -28,10 +30,12 @@ public class PlayerManger : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         sr2 = arm.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        health = healthStart;
     }
 
     void FixedUpdate()
     {
+        speedslow = speed/2;
         if (health <= 0) 
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -39,7 +43,15 @@ public class PlayerManger : MonoBehaviour
         }
         // Normal movement
         moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            movespeed = speedslow;
+        }
+        else
+        {
+            movespeed = speed;
+        }
+        rb.velocity = new Vector2(moveInput * movespeed, rb.velocity.y);
         //Animations speed
         if (rb.velocity.x < 0)
         {
