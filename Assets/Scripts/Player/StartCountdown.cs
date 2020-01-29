@@ -31,7 +31,7 @@ public class StartCountdown : MonoBehaviour
     {
         if (timeLeft >= 0.0f && canCount)
         {
-            timeLeft -= Time.deltaTime;
+            timeLeft -= Time.unscaledDeltaTime;
             startText.text = (timeLeft).ToString("F1");
             
         }
