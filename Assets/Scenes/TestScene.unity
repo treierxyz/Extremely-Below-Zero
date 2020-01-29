@@ -586,7 +586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &402383549
 GameObject:
@@ -828,7 +828,7 @@ RectTransform:
   m_Children:
   - {fileID: 603979744}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -974,7 +974,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603979743
 GameObject:
@@ -1347,11 +1347,11 @@ Transform:
   m_GameObject: {fileID: 790971040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.09, y: 0.85, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 2.75, y: 2.75, z: 1}
   m_Children:
   - {fileID: 1463422282}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &790971043
 CapsuleCollider2D:
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  arm: {fileID: 1358846530}
+  arm: {fileID: 1358846532}
   healthStart: 10
   health: 0
 --- !u!50 &1318476359
@@ -2713,7 +2713,7 @@ Transform:
   - {fileID: 1536711095}
   - {fileID: 1830911138}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1318476363
 MonoBehaviour:
@@ -3555,7 +3555,7 @@ RectTransform:
   m_Children:
   - {fileID: 402383550}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

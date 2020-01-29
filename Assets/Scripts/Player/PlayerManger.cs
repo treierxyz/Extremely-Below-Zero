@@ -18,9 +18,8 @@ public class PlayerManger : MonoBehaviour
     public Transform groundTest;
     public float checkRadius;
     public LayerMask ground;
-    public GameObject arm;
+    public Transform arm;
     private Animator animator;
-
     public float healthStart;
     public float health;
 
@@ -28,7 +27,6 @@ public class PlayerManger : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        sr2 = arm.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         health = healthStart;
     }
@@ -66,12 +64,15 @@ public class PlayerManger : MonoBehaviour
         if(difference.x > 0)
         {
             sr.flipX = false;
-            sr2.flipX = false;
+            Vector3 newScale = new Vector3(1,arm.localScale.y,arm.localScale.z);
+            arm.localScale = newScale;
+            
         } 
         else if(difference.x < 0)
         {
             sr.flipX = true;
-            sr2.flipX = true;
+            Vector3 newScale = new Vector3(-1,arm.localScale.y,arm.localScale.z);
+            arm.localScale = newScale;
         }
         // Jumping
         isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
