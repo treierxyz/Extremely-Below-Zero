@@ -24,8 +24,15 @@ public class PressAnyScript : MonoBehaviour
             pressed = true;
             pressAny.SetActive(false);
             buttons.SetActive(true);
-            animatorT.SetTrigger("transition");
+            title.SetActive(true);
         }
+    }
+    public void backToPress()
+    {
+        buttons.SetActive(false);
+        title.SetActive(false);
+        pressAny.SetActive(true);
+        pressed = false;
     }
     public void TriggerTitle()
     {
