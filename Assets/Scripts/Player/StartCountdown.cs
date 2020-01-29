@@ -14,6 +14,8 @@ public class StartCountdown : MonoBehaviour
     private PlayerManger playerManger;
     private Rotator rotator;
     private Weapon weapon;
+    public GameObject timer;
+    private Timer timerScript;
     private bool canCount = true;
     private bool doOnce = false;
 
@@ -23,6 +25,7 @@ public class StartCountdown : MonoBehaviour
         playerManger = character.GetComponent<PlayerManger>();
         rotator = character.GetComponentInChildren<Rotator>();
         weapon = character.GetComponentInChildren<Weapon>();
+        timerScript = timer.GetComponent<Timer>();
     }
     void Update()
     {
@@ -42,6 +45,7 @@ public class StartCountdown : MonoBehaviour
                 playerManger.enabled = true;
                 rotator.enabled = true;
                 weapon.enabled = true;
+                timerScript.canCount = true;
             }
     }
 }
