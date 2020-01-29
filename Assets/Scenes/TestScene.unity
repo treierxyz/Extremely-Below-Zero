@@ -3404,7 +3404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 572277428}
   slowDownAmount: 0.5
-  slowDownDuration: 800
+  slowDownDuration: 5
   slowDownRemaining: 0
   isSlowTime: 0
 --- !u!95 &1318476364
@@ -3524,13 +3524,13 @@ MonoBehaviour:
   projectile: {fileID: 8985430833513000874, guid: 216cf6028f4416d47935fb57a7bbd6f1,
     type: 3}
   shotPoint: {fileID: 2122642583}
-  clipSize: 2000
+  clipSize: 20
   clipSizeReal: 0
   reloadTime: 3
   reloadTimeHidden: 0
   startTimeBtwShots: 0.1
   isReloading: 0
-  machineGunMode: 1
+  machineGunMode: 0
 --- !u!1 &1463422281
 GameObject:
   m_ObjectHideFlags: 0
