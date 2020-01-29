@@ -11,12 +11,10 @@ public class SlowTime : MonoBehaviour
     public float slowDownRemaining;
     public bool isSlowTime = false;
     private float fixedDeltaTime;
-    private float deltaTime;
     // Start is called before the first frame update
     void Awake()
     {
         this.fixedDeltaTime = Time.fixedDeltaTime;
-        this.deltaTime = Time.deltaTime;
         audioSource = music.GetComponent<AudioSource>();
         slowDownRemaining = slowDownDuration;
     }

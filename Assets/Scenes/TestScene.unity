@@ -156,7 +156,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 23, y: 0}
-  m_SizeDelta: {x: 119.12, y: 22.8}
+  m_SizeDelta: {x: 287.19, y: 22.8}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &154493734
 MonoBehaviour:
@@ -779,7 +779,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 23.00001, y: 0}
-  m_SizeDelta: {x: 119.12, y: 22.8}
+  m_SizeDelta: {x: 241.25, y: 22.8}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &360352458
 CanvasRenderer:
@@ -3192,7 +3192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 572277428}
   slowDownAmount: 0.5
-  slowDownDuration: 7
+  slowDownDuration: 800
   slowDownRemaining: 0
   isSlowTime: 0
 --- !u!95 &1318476364
@@ -3312,13 +3312,13 @@ MonoBehaviour:
   projectile: {fileID: 8985430833513000874, guid: 216cf6028f4416d47935fb57a7bbd6f1,
     type: 3}
   shotPoint: {fileID: 2122642583}
-  clipSize: 20
+  clipSize: 2000
   clipSizeReal: 0
   reloadTime: 3
   reloadTimeHidden: 0
   startTimeBtwShots: 0.1
   isReloading: 0
-  machineGunMode: 0
+  machineGunMode: 1
 --- !u!1 &1463422281
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,7 +4753,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 23.00001, y: 0}
-  m_SizeDelta: {x: 119.12, y: 22.8}
+  m_SizeDelta: {x: 291.57, y: 22.8}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &2061022789
 CanvasRenderer:
