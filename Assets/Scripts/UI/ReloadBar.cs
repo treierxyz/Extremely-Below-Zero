@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ReloadBar : MonoBehaviour
 {
-    public Text ammoDisplay;
+    public TextMeshProUGUI ammoDisplay;
     public Slider slider;
     public GameObject reloadingBar;
     public GameObject arm;
@@ -40,6 +41,6 @@ public class ReloadBar : MonoBehaviour
             //reloadingBar.SetActive(false);
             CurrentValue = weapon.clipSizeReal/weapon.clipSize;
         }
-        ammoDisplay.text = (weapon.clipSize).ToString() + "/" + (weapon.clipSizeReal).ToString();
+        ammoDisplay.text = (weapon.clipSizeReal).ToString() + "/" + (weapon.clipSize).ToString();
     }
 }

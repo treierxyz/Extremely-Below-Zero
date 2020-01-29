@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HealthBar : MonoBehaviour
+public class SlowTimeBar : MonoBehaviour
 {
-    public TextMeshProUGUI healthDisplay;
+    public TextMeshProUGUI slowTimeDisplay;
     public Slider slider;
-    public GameObject healthBar;
-    public GameObject character;
-    private PlayerManger playerManger;
+    public GameObject reloadingBar;
+    public SlowTime slowTime;
     private float currentValue = 0f;
     public float CurrentValue {
     get {
@@ -24,14 +23,13 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerManger = character.GetComponent<PlayerManger>();
         CurrentValue = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CurrentValue = playerManger.health/playerManger.healthStart;
-        healthDisplay.text = (playerManger.health).ToString();
+        CurrentValue = slowTime.slowDownRemaining/slowTime.slowDownDuration;
+        slowTimeDisplay.text = (slowTime.slowDownRemaining).ToString("F1") + "/" + (slowTime.slowDownDuration).ToString();
     }
 }

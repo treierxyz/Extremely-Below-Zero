@@ -7,33 +7,59 @@ public class SlowTime : MonoBehaviour
     public GameObject music;
     private AudioSource audioSource;
 	public float slowDownAmount;
+    public float slowDownDuration;
+    public float slowDownRemaining;
     public bool isSlowTime = false;
     private float fixedDeltaTime;
+    private float deltaTime;
     // Start is called before the first frame update
     void Awake()
     {
         this.fixedDeltaTime = Time.fixedDeltaTime;
+        this.deltaTime = Time.deltaTime;
         audioSource = music.GetComponent<AudioSource>();
+        slowDownRemaining = slowDownDuration;
     }
 
     // Update is called once per frame
 	void Update()
     {
-		if(Input.GetKeyDown(KeyCode.E))
-		{
-			if (Time.timeScale == 1.0f)
-            {
-                Time.timeScale = slowDownAmount;
-                audioSource.pitch = 0.75f;
-                isSlowTime = true;
+        if (slowDownRemaining > 0)
+        {
+		    if(Input.GetKeyDown(KeyCode.E))
+		    {
+		        if (Time.timeScale == 1.0f)
+                {
+                    Time.timeScale = slowDownAmount;
+                    audioSource.pitch = 0.75f;
+                    isSlowTime = true;
+                }
+                else
+                {
+                    Time.timeScale = 1.0f;
+                    audioSource.pitch = 1.0f;
+                    isSlowTime = false;
+                }
+                Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
             }
-            else
+            if (isSlowTime)
             {
-                Time.timeScale = 1.0f;
-                audioSource.pitch = 1.0f;
-                isSlowTime = false;
+                slowDownRemaining -= this.fixedDeltaTime;
             }
-            Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
-		}
-    }
+            if (slowDownRemaining > slowDownDuration)
+            {
+                slowDownRemaining = slowDownDuration;
+            }
+        }
+        else if (slowDownRemaining < 0)
+        {
+            Time.timeScale = 1.0f;
+            audioSource.pitch = 1.0f;
+            isSlowTime = false;
+        }
+        if (slowDownRemaining <= slowDownDuration && !isSlowTime)
+        {
+            slowDownRemaining += this.fixedDeltaTime;
+        }
+	}
 }
