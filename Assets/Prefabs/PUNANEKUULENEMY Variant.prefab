@@ -18,7 +18,7 @@ MonoBehaviour:
   damage: 1
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 3328
 --- !u!1001 &3370136477344127568
 PrefabInstance:
   m_ObjectHideFlags: 0

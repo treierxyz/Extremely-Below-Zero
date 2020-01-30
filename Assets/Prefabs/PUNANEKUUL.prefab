@@ -100,4 +100,4 @@ MonoBehaviour:
   damage: 1
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 2816
