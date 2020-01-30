@@ -12,6 +12,8 @@ public class Finish : MonoBehaviour
     private Rotator rotator;
     private Weapon weapon;
     public Animator animator;
+    public Timer timer;
+    public GameObject mainUIOverlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +29,14 @@ public class Finish : MonoBehaviour
         Debug.Log(finished);
         if (finished)
         {
-            levelComplete.SetActive(true);
+            timer.canCount = false;
             animator.SetFloat("speed", 0f);
             slowTime.enabled = false;
             playerManger.enabled = false;
             rotator.enabled = false;
             weapon.enabled = false;
+            mainUIOverlay.SetActive(false);
+            levelComplete.SetActive(true);
         }
     }
 
