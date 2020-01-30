@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: elevatorOPEN
+  m_Name: RightClosedPlatt
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: cebdc8f7300ba9b9d80f47d9b288b4ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a49371ec6b178a358335d3a0c4d5b66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
