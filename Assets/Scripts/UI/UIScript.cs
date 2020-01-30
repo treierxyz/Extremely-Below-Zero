@@ -7,7 +7,7 @@ public class UIScript : MonoBehaviour
     public GameObject overlay;
     void Update()
     {
-        if (PauseMenu.GameIsPaused == false) {
+        if (PauseMenu.gameIsPaused == false) {
             ShowUI();
         } else {
             HideUI();

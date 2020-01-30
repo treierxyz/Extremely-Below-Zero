@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour
     public bool isReloading;
     private bool isMBHeld;
     public bool machineGunMode = false;
+    public PauseMenu PauseMenu;
     private void Start()
     {
         clipSizeReal = clipSize;
@@ -28,7 +29,7 @@ public class Weapon : MonoBehaviour
         {
             if (timeBtwShots <= 0)
             {
-                if (Input.GetMouseButton(0) && !isMBHeld)
+                if (Input.GetMouseButton(0) && !isMBHeld && !PauseMenu.gameIsPaused)
                 {
                     //Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
                     Instantiate(projectile, shotPoint.position, transform.rotation);

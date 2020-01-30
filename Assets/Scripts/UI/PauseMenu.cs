@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject audioSourceObject;
-    public static bool GameIsPaused = false;
+    public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject pauseMenuButtons;
+    public GameObject settings;
     public GameObject mainCharacter;
     private SlowTime slowTime;
     private AudioSource audioSource;
     private float previousTime;
     private float previousMusic;
     private float fixedDeltaTime;
+    private bool settingsOpen = false;
     // Update is called once per frame
     void Awake()
     {
@@ -25,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (gameIsPaused)
             {
                 Resume();
             } else
@@ -36,17 +39,22 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        if (settingsOpen)
+        {
+            pauseMenuButtons.SetActive(true);
+            settings.SetActive(false);
+        }
         pauseMenuUI.SetActive(false);
         if(slowTime.isSlowTime)
         {
             Time.timeScale = previousTime;
-            GameIsPaused = false;
+            gameIsPaused = false;
             audioSource.pitch = previousMusic;
         }
         else
         {
             Time.timeScale = 1f;
-            GameIsPaused = false;
+            gameIsPaused = false;
             audioSource.pitch = 1f;
         }
     }
@@ -56,19 +64,28 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         previousTime = Time.timeScale;
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        gameIsPaused = true;
         previousMusic = audioSource.pitch;
         audioSource.pitch = 0.0f;
     }
 
     public void LoadMenu()
     {
-        Debug.Log("Loading menu");
+        pauseMenuButtons.SetActive(false);
+        settings.SetActive(true);
+        settingsOpen = true;
+
+    }
+    public void ExitMenu()
+    {
+        pauseMenuButtons.SetActive(true);
+        settings.SetActive(false);
+        settingsOpen = false;
     }
     public void QuitToMenu()
     {
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        gameIsPaused = false;
         audioSource.pitch = 1f;
         pauseMenuUI.SetActive(false);
         slowTime.isSlowTime = false;
