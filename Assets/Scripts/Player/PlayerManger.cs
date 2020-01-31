@@ -5,11 +5,8 @@ using UnityEngine;
 public class PlayerManger : MonoBehaviour
 {
     public float speed;
-    public float speedslow;
-    public float movespeed;
     private float moveInput;
     private Rigidbody2D rb;
-    // Jumping
     public float jumpHeight;
     private bool isGrounded;
     public Transform groundTest;
@@ -18,6 +15,8 @@ public class PlayerManger : MonoBehaviour
     private Animator animator;
     public float healthStart;
     public float health;
+    public bool dead;
+    public GameObject restartText;
 
     void Start()
     {
@@ -31,35 +30,28 @@ public class PlayerManger : MonoBehaviour
         if (health <= 0) 
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            dead = true;
+
         }
         // Normal movement
-        moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        moveInput = Input.GetAxisRaw("Horizontal");
+        float moveBy = moveInput * speed;
+        if (!dead)
+        {
+            rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        }
         //Animations speed
-        if (rb.velocity.x < 0)
-        {
-            animator.SetFloat("speed", -rb.velocity.x);
-        }
-        else if (rb.velocity.x > 0)
-        {
-            animator.SetFloat("speed", rb.velocity.x);
-        }
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        // Flips players sprite
-        if(difference.x > 0)
-        {
-            Vector3 charScale = new Vector3(5,transform.localScale.y,transform.localScale.z);
-            transform.localScale = charScale;
-            
-        } 
-        else if(difference.x < 0)
-        {
-            Vector3 charScale = new Vector3(-5,transform.localScale.y,transform.localScale.z);
-            transform.localScale = charScale;
-        }
+        animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+        
         // Jumping
         isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
+
+        //Kill key
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            health = 0;
+        }
     }
     void Update()
     {
@@ -78,4 +70,5 @@ public class PlayerManger : MonoBehaviour
         //Instantiate(explosion, transform.position, Quaternion.identity);
         health -= damage;
     }
+
 }

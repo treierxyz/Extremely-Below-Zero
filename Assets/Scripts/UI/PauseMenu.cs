@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuButtons;
     public GameObject settings;
     public GameObject mainCharacter;
+    public StartCountdown startCountdown;
+    public Timer timer;
     private SlowTime slowTime;
     private AudioSource audioSource;
     private float previousTime;
@@ -39,6 +41,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        if (!startCountdown.canCount)
+        {
+            timer.canCount = true;
+        }
+        
         if (settingsOpen)
         {
             pauseMenuButtons.SetActive(true);
@@ -61,6 +68,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        timer.canCount = false;
         pauseMenuUI.SetActive(true);
         previousTime = Time.timeScale;
         Time.timeScale = 0f;
@@ -91,5 +99,16 @@ public class PauseMenu : MonoBehaviour
         slowTime.isSlowTime = false;
         Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        audioSource.pitch = 1f;
+        pauseMenuUI.SetActive(false);
+        slowTime.isSlowTime = false;
+        Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.buildIndex, LoadSceneMode.Single);
     }
 }

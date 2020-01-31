@@ -33,6 +33,9 @@ public class Weapon : MonoBehaviour
                 {
                     //Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
                     Instantiate(projectile, shotPoint.position, transform.rotation);
+                    Debug.Log(projectile);
+                    Debug.Log(shotPoint.position);
+                    Debug.Log(transform.rotation);
                     timeBtwShots = startTimeBtwShots;
                     clipSizeReal -= 1;
                     if (!machineGunMode)

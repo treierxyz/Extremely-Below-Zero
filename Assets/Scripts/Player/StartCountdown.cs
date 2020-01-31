@@ -9,6 +9,7 @@ public class StartCountdown : MonoBehaviour
     public float timeLeft = 3.0f;
     public TextMeshProUGUI startText; // used for showing countdown from 3, 2, 1 
     public GameObject text;
+    public GameObject gsiText;
     public GameObject character;
     private SlowTime slowTime;
     private PlayerManger playerManger;
@@ -16,8 +17,9 @@ public class StartCountdown : MonoBehaviour
     private Weapon weapon;
     public GameObject timer;
     private Timer timerScript;
-    private bool canCount = true;
+    public bool canCount = true;
     private bool doOnce = false;
+    private bool doOnce2 = false;
 
     void Start()
     {
@@ -29,23 +31,27 @@ public class StartCountdown : MonoBehaviour
     }
     void Update()
     {
+        timeLeft -= Time.unscaledDeltaTime;
         if (timeLeft >= 0.0f && canCount)
         {
-            timeLeft -= Time.unscaledDeltaTime;
-            startText.text = (timeLeft).ToString("F1");
+            startText.text = Mathf.Floor(timeLeft+1).ToString("F0");
             
         }
         else if (timeLeft <= 0.0f && !doOnce)
-            {
-                canCount = false;
-                doOnce = true;
-                timeLeft = 0.0f;
-                text.SetActive(false);
-                slowTime.enabled = true;
-                playerManger.enabled = true;
-                rotator.enabled = true;
-                weapon.enabled = true;
-                timerScript.canCount = true;
-            }
+        {
+            startText.text = "GO!";
+            canCount = false;
+            doOnce = true;
+            gsiText.SetActive(false);
+            slowTime.enabled = true;
+            playerManger.enabled = true;
+            weapon.enabled = true;
+            timerScript.canCount = true;
+        }
+        if (timeLeft <= -3.0f && !doOnce2)
+        {
+            doOnce2 = true;
+            text.SetActive(false);
+        }
     }
 }

@@ -9,7 +9,10 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText;
     private float startTime;
     public bool canCount = false;
+    public bool doOnce = false;
     public float t;
+    public float tOld;
+    public string timeInHRF;
     //private float timeC;
     // Start is called before the first frame update
     void Start()
@@ -21,18 +24,24 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (doOnce)
+        {
+            startTime = Time.fixedUnscaledTime;
+        }
         if (canCount)
         {
-            t = Mathf.Floor(Time.unscaledTime - startTime);
-
-            string minutes = ((int) t / 60).ToString("00");
-            string seconds = (t % 60).ToString("00");
-
-            timerText.text = minutes + ":" + seconds;
+            t = Time.fixedUnscaledTime - startTime + tOld;
+            string minutes = ((int) Mathf.Floor(t) / 60).ToString("00");
+            string seconds = (Mathf.Floor(t) % 60).ToString("00");
+            timeInHRF = minutes + ":" + seconds;
+            timerText.text = timeInHRF;
+            doOnce = false;
         }
         else
         {
-            startTime = Time.unscaledTime;
+            tOld = t;
+            startTime = Time.fixedUnscaledTime;
+            doOnce = true;
         }
     }
 }
