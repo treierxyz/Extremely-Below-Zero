@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: cebdc8f7300ba9b9d80f47d9b288b4ec
+guid: da03b414bf1fef1ec9e3c39ccde1fbf3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2957684851069213024
-    second: elevatorOPEN_0
+      213: 4373359935927782374
+    second: elevatorlv4_0
   - first:
-      213: 698889832846860118
-    second: elevatorOPEN_1
+      213: -4843619174960236593
+    second: elevatorlv4_1
   - first:
-      213: 3292127047768859824
-    second: elevatorOPEN_2
+      213: -8282807609988342728
+    second: elevatorlv4_2
   - first:
-      213: -8942950896673606835
-    second: elevatorOPEN_3
+      213: -7948958167067644296
+    second: elevatorlv4_3
+  - first:
+      213: 518395845144528105
+    second: elevatorlv4_4
+  - first:
+      213: 3489600247262319555
+    second: elevatorlv4_5
+  - first:
+      213: 8030999480951344757
+    second: elevatorlv4_6
+  - first:
+      213: 4004515992274466551
+    second: elevatorlv4_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: elevatorOPEN_0
+      name: elevatorlv4_0
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +136,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f113ad9b45b7e16b972cfff6c83c5e
-      internalID: 2957684851069213024
+      spriteID: af1e00099b97621729382752eb1ee5d0
+      internalID: 4373359935927782374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: elevatorOPEN_1
+      name: elevatorlv4_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eded6ca9e879f68d287f6b96b58bf139
+      internalID: -4843619174960236593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorlv4_2
       rect:
         serializedVersion: 2
         x: 32
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +178,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0548a57be90d043798e15af96295cf66
-      internalID: 698889832846860118
+      spriteID: 8c4b38f315784fb9a8b7225459ec19b2
+      internalID: -8282807609988342728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: elevatorOPEN_2
+      name: elevatorlv4_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda169907bad7663a9d0bc060b28b85c
+      internalID: -7948958167067644296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorlv4_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818127c7347c8c47d95b15c45602655d
+      internalID: 518395845144528105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorlv4_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00580932ba78cb0b8dd2fac8f993cea
+      internalID: 3489600247262319555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorlv4_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da927e50fadc6507ab2c6b7c30687034
-      internalID: 3292127047768859824
+      spriteID: 70c2035d9f1c56d9b9b4521ce960b937
+      internalID: 8030999480951344757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: elevatorOPEN_3
+      name: elevatorlv4_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +283,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f85619f7764ec69b2a24eb8c862f6f7b
-      internalID: -8942950896673606835
+      spriteID: efc4f972dfb26449db7d0df7f6184d4d
+      internalID: 4004515992274466551
       vertices: []
       indices: 
       edges: []

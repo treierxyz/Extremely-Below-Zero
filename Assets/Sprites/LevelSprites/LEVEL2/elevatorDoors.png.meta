@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 8b368ce5ce377d9ef933ee0f98eb87f2
+guid: de74baa56cf484369bcbcd59581e4b0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9035850717913015448
-    second: uks_0
+      213: 3096648849684633027
+    second: elevatorDoors_0
   - first:
-      213: -5889363627451966102
-    second: uks_1
+      213: 3559866541721707677
+    second: elevatorDoors_1
   - first:
-      213: -6825360655727860128
-    second: uks_2
+      213: 1161990722162550931
+    second: elevatorDoors_2
   - first:
-      213: 1884449163912290526
-    second: uks_3
+      213: 5340043000369221632
+    second: elevatorDoors_3
   - first:
-      213: -3560445879413132108
-    second: uks_4
+      213: -8121125978276732741
+    second: elevatorDoors_4
   - first:
-      213: -1572067937818479409
-    second: uks_5
+      213: 5040655872799576103
+    second: elevatorDoors_5
   - first:
-      213: -6212370215870630081
-    second: uks_6
+      213: 2661303164689258230
+    second: elevatorDoors_6
   - first:
-      213: -9001762353009876788
-    second: uks_7
+      213: -6762812257539379715
+    second: elevatorDoors_7
+  - first:
+      213: -5622773029444652753
+    second: elevatorDoors_8
+  - first:
+      213: -3703977064207107489
+    second: elevatorDoors_9
+  - first:
+      213: -1338670566022383393
+    second: elevatorDoors_10
+  - first:
+      213: -7915029377835563802
+    second: elevatorDoors_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,7 +134,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: uks_0
+      name: elevatorDoors_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fafb1355747a2bd91bb39a76077f5d
+      internalID: 3096648849684633027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorDoors_1
       rect:
         serializedVersion: 2
         x: 16
@@ -136,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acdb0db505fac4aab9089362684ee214
-      internalID: -9035850717913015448
+      spriteID: 53ed8f910bfade199815c25e381763b8
+      internalID: 3559866541721707677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_1
+      name: elevatorDoors_2
       rect:
         serializedVersion: 2
         x: 32
@@ -157,14 +190,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48f3ecf92053730578a50eab9c39cdc8
-      internalID: -5889363627451966102
+      spriteID: 6af10e455aaac88a4a20faf2bb4dd271
+      internalID: 1161990722162550931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_2
+      name: elevatorDoors_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4e4634c97b07e849e3d99d051ac60a
+      internalID: 5340043000369221632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorDoors_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbaa44c4982d8fcfa4c6dff4ac957a3
+      internalID: -8121125978276732741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorDoors_5
       rect:
         serializedVersion: 2
         x: 16
@@ -178,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cfa0026ea9167b85ac58f33803c2db5
-      internalID: -6825360655727860128
+      spriteID: 72490fba540cf9d05aa812449fea722d
+      internalID: 5040655872799576103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_3
+      name: elevatorDoors_6
       rect:
         serializedVersion: 2
         x: 32
@@ -199,14 +274,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c515bcc32048b470abbe1a6f5acb6ab3
-      internalID: 1884449163912290526
+      spriteID: 639495df033273e01b2fd064f6cc2b9a
+      internalID: 2661303164689258230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_4
+      name: elevatorDoors_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690359e97deac092dbd49b00178275f3
+      internalID: -6762812257539379715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorDoors_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8eb1780243d744429aa95e88cf0bc80
+      internalID: -5622773029444652753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorDoors_9
       rect:
         serializedVersion: 2
         x: 16
@@ -220,14 +337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3b418d5a1fb1b60d8a76bffac2bbf1f
-      internalID: -3560445879413132108
+      spriteID: a8d5bcd82b25c67f7b97024b4b595c4e
+      internalID: -3703977064207107489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_5
+      name: elevatorDoors_10
       rect:
         serializedVersion: 2
         x: 32
@@ -241,8 +358,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fd476a9dde6bd20bc9c916b6f1ddd4
-      internalID: -1572067937818479409
+      spriteID: ba3a5333dbe9956a086a30111a9f3a9d
+      internalID: -1338670566022383393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorDoors_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c135174ce3e3dd20b37ce12d98e447e
+      internalID: -7915029377835563802
       vertices: []
       indices: 
       edges: []

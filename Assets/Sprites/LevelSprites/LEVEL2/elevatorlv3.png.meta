@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 8b368ce5ce377d9ef933ee0f98eb87f2
+guid: aa6efa873a4c03621a133613b6416d64
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9035850717913015448
-    second: uks_0
+      213: -1033096559348558837
+    second: elevatorlv3_0
   - first:
-      213: -5889363627451966102
-    second: uks_1
+      213: -7910083124375849072
+    second: elevatorlv3_1
   - first:
-      213: -6825360655727860128
-    second: uks_2
+      213: 1611422355862548815
+    second: elevatorlv3_2
   - first:
-      213: 1884449163912290526
-    second: uks_3
+      213: -732183702420189612
+    second: elevatorlv3_3
   - first:
-      213: -3560445879413132108
-    second: uks_4
+      213: -8957327822848557785
+    second: elevatorlv3_4
   - first:
-      213: -1572067937818479409
-    second: uks_5
+      213: -9043921286647958122
+    second: elevatorlv3_5
   - first:
-      213: -6212370215870630081
-    second: uks_6
+      213: 6680805852971191284
+    second: elevatorlv3_6
   - first:
-      213: -9001762353009876788
-    second: uks_7
+      213: -1137583984652650344
+    second: elevatorlv3_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,7 +122,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: uks_0
+      name: elevatorlv3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f26db5dea5983f8cb46c0b81a1021c1
+      internalID: -1033096559348558837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorlv3_1
       rect:
         serializedVersion: 2
         x: 16
@@ -136,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acdb0db505fac4aab9089362684ee214
-      internalID: -9035850717913015448
+      spriteID: 32a5682283e28596baa8d91803c8e0d0
+      internalID: -7910083124375849072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_1
+      name: elevatorlv3_2
       rect:
         serializedVersion: 2
         x: 32
@@ -157,17 +178,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48f3ecf92053730578a50eab9c39cdc8
-      internalID: -5889363627451966102
+      spriteID: 0f8994d1f8c58c5bf805d68de782b71a
+      internalID: 1611422355862548815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_2
+      name: elevatorlv3_3
       rect:
         serializedVersion: 2
-        x: 16
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baa4a0f60cbf770e8b7225bc8d826dc
+      internalID: -732183702420189612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elevatorlv3_4
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -178,17 +220,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cfa0026ea9167b85ac58f33803c2db5
-      internalID: -6825360655727860128
+      spriteID: bf7064819771322e8befb7446551cad9
+      internalID: -8957327822848557785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_3
+      name: elevatorlv3_5
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 16
         width: 16
         height: 16
@@ -199,17 +241,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c515bcc32048b470abbe1a6f5acb6ab3
-      internalID: 1884449163912290526
+      spriteID: 7c0adf5bed1ff9f4ba84a84d9c1f1792
+      internalID: -9043921286647958122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_4
+      name: elevatorlv3_6
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -220,17 +262,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3b418d5a1fb1b60d8a76bffac2bbf1f
-      internalID: -3560445879413132108
+      spriteID: 8b792d17d598371c88e4a374f500361e
+      internalID: 6680805852971191284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uks_5
+      name: elevatorlv3_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
         width: 16
         height: 16
@@ -241,8 +283,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fd476a9dde6bd20bc9c916b6f1ddd4
-      internalID: -1572067937818479409
+      spriteID: c9429e40d3c7d895a85345cc7e5bcc53
+      internalID: -1137583984652650344
       vertices: []
       indices: 
       edges: []
