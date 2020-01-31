@@ -11,6 +11,7 @@ public class StartCountdown : MonoBehaviour
     public GameObject text;
     public GameObject gsiText;
     public GameObject character;
+    public GameObject UI;
     private SlowTime slowTime;
     private PlayerManger playerManger;
     private Rotator rotator;
@@ -43,6 +44,7 @@ public class StartCountdown : MonoBehaviour
             canCount = false;
             doOnce = true;
             gsiText.SetActive(false);
+            UI.SetActive(true);
             slowTime.enabled = true;
             playerManger.enabled = true;
             weapon.enabled = true;

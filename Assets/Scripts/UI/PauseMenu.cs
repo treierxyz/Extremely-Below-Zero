@@ -19,6 +19,7 @@ public class PauseMenu : MonoBehaviour
     private float previousMusic;
     private float fixedDeltaTime;
     private bool settingsOpen = false;
+    public GameObject overlay;
     // Update is called once per frame
     void Awake()
     {
@@ -51,7 +52,10 @@ public class PauseMenu : MonoBehaviour
             pauseMenuButtons.SetActive(true);
             settings.SetActive(false);
         }
+        
         pauseMenuUI.SetActive(false);
+        overlay.SetActive(true);
+
         if(slowTime.isSlowTime)
         {
             Time.timeScale = previousTime;
@@ -69,6 +73,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         timer.canCount = false;
+        overlay.SetActive(false);
         pauseMenuUI.SetActive(true);
         previousTime = Time.timeScale;
         Time.timeScale = 0f;

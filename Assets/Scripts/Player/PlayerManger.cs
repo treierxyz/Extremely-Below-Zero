@@ -16,7 +16,8 @@ public class PlayerManger : MonoBehaviour
     public float healthStart;
     public float health;
     public bool dead;
-    public GameObject restartText;
+    public AudioSource audioSource;
+    public AudioSource audioSourceDeath;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class PlayerManger : MonoBehaviour
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             //Destroy(gameObject);
             dead = true;
-
+            DeathMusic();
         }
         // Normal movement
         moveInput = Input.GetAxisRaw("Horizontal");
@@ -70,5 +71,9 @@ public class PlayerManger : MonoBehaviour
         //Instantiate(explosion, transform.position, Quaternion.identity);
         health -= damage;
     }
-
+    void DeathMusic()
+    {
+        audioSource.Stop();
+        audioSourceDeath.Play();
+    }
 }

@@ -5,14 +5,6 @@ using UnityEngine;
 public class UIScript : MonoBehaviour
 {
     public GameObject overlay;
-    void Update()
-    {
-        if (PauseMenu.gameIsPaused == false) {
-            ShowUI();
-        } else {
-            HideUI();
-        }
-    }
     void ShowUI()
     {
         overlay.SetActive(true);
