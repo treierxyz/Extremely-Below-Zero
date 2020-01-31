@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Flipper : MonoBehaviour
 {
-    private bool m_FacingRight = true;
+    public bool m_FacingRight = true;
     // Start is called before the first frame update
     void Start()
     {

@@ -16,6 +16,7 @@ public class PlayerManger : MonoBehaviour
     public float healthStart;
     public float health;
     public bool dead;
+	private Flipper flipper;
     public AudioSource audioSource;
     public AudioSource audioSourceDeath;
 
@@ -23,6 +24,7 @@ public class PlayerManger : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+		flipper = GetComponent<Flipper>();
         health = healthStart;
     }
 
@@ -42,17 +44,9 @@ public class PlayerManger : MonoBehaviour
         {
             rb.velocity = new Vector2(moveBy, rb.velocity.y);
         }
-        //Animations speed
-        animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
         
         // Jumping
         isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
-
-        //Kill key
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            health = 0;
-        }
     }
     void Update()
     {
@@ -65,6 +59,22 @@ public class PlayerManger : MonoBehaviour
             }
             
         }
+		//Kill key
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            health = 0;
+        }
+		//Animations speed
+		if (rb.velocity.x > 0 && !flipper.m_FacingRight || rb.velocity.x < 0 && flipper.m_FacingRight )
+		{
+			animator.SetFloat("speedBack", Mathf.Abs(rb.velocity.x));
+			animator.SetFloat("speed", 0);
+		}
+        else
+		{
+			animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+			animator.SetFloat("speedBack", 0);
+		}
     }
     public void TakeDamage(int damage) 
     {

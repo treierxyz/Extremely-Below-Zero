@@ -862,7 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelComplete: {fileID: 263805705}
   character: {fileID: 1318476357}
-  animator: {fileID: 1318476364}
+  playerAnimator: {fileID: 1318476364}
   timer: {fileID: 510966880}
   mainUIOverlay: {fileID: 1382708863}
 --- !u!61 &1514107575

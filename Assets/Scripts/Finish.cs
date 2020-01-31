@@ -11,7 +11,7 @@ public class Finish : MonoBehaviour
     private PlayerManger playerManger;
     private Rotator rotator;
     private Weapon weapon;
-    public Animator animator;
+    public Animator playerAnimator;
     public Timer timer;
     public GameObject mainUIOverlay;
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class Finish : MonoBehaviour
         if (finished)
         {
             timer.canCount = false;
-            animator.SetFloat("speed", 0f);
+            playerAnimator.SetFloat("speed", 0f);
             slowTime.enabled = false;
             playerManger.enabled = false;
             rotator.enabled = false;
