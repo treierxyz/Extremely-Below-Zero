@@ -10,11 +10,11 @@ public class SlowTime : MonoBehaviour
     public float slowDownDuration;
     public float slowDownRemaining;
     public bool isSlowTime = false;
-    private float fixedDeltaTime;
+    private float fixedUnscaledDeltaTime;
     // Start is called before the first frame update
     void Awake()
     {
-        this.fixedDeltaTime = Time.fixedDeltaTime;
+        this.fixedUnscaledDeltaTime = Time.fixedUnscaledDeltaTime;
         audioSource = music.GetComponent<AudioSource>();
         slowDownRemaining = slowDownDuration;
     }
@@ -38,11 +38,11 @@ public class SlowTime : MonoBehaviour
                     audioSource.pitch = 1.0f;
                     isSlowTime = false;
                 }
-                Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
+                Time.fixedDeltaTime = this.fixedUnscaledDeltaTime * Time.timeScale;
             }
             if (isSlowTime)
             {
-                slowDownRemaining -= this.fixedDeltaTime;
+                slowDownRemaining -= this.fixedUnscaledDeltaTime;
             }
             if (slowDownRemaining > slowDownDuration)
             {
@@ -57,7 +57,7 @@ public class SlowTime : MonoBehaviour
         }
         if (slowDownRemaining <= slowDownDuration && !isSlowTime)
         {
-            slowDownRemaining += this.fixedDeltaTime;
+            slowDownRemaining += this.fixedUnscaledDeltaTime;
         }
 	}
 }
