@@ -1,8 +1,8 @@
 Assets/TextMesh\ Pro/Resources/Shaders/* linguist-vendored
-*.unity linguist-language=Unity3D-Asset
-*.anim linguist-language=Unity3D-Asset
-*.asset linguist-language=Unity3D-Asset
-*.mask linguist-language=Unity3D-Asset
-*.mat linguist-language=Unity3D-Asset
-*.meta linguist-language=Unity3D-Asset
-*.prefab linguist-language=Unity3D-Asset
+*.unity linguist-vendored=false
+*.anim linguist-vendored=false
+*.asset linguist-vendored=false
+*.mask linguist-vendored=false
+*.mat linguist-vendored=false
+*.meta linguist-vendored=false
+*.prefab linguist-vendored=false
