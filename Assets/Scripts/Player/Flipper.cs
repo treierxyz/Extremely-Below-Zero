@@ -5,6 +5,7 @@ using UnityEngine;
 public class Flipper : MonoBehaviour
 {
     public bool m_FacingRight = true;
+    public PauseMenu pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +17,17 @@ public class Flipper : MonoBehaviour
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         // Flips players sprite
-        if(difference.x > 0 && !m_FacingRight)
+        if (!pauseMenu.gameIsPausedPublic)
         {
-            Flip();
-            
-        } 
-        else if(difference.x < 0 && m_FacingRight)
-        {
-            Flip();
+            if (difference.x > 0 && !m_FacingRight)
+            {
+                Flip();
+
+            }
+            else if (difference.x < 0 && m_FacingRight)
+            {
+                Flip();
+            }
         }
     }
     private void Flip()

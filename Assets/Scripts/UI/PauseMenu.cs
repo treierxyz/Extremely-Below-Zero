@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             if (gameIsPaused)
             {
@@ -51,27 +51,33 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuButtons.SetActive(true);
             settings.SetActive(false);
-        }
-        if(slowTime.isSlowTime)
-        {
-            Time.timeScale = previousTime;
-            gameIsPaused = false;
-            gameIsPausedPublic = false;
-            audioSource.pitch = previousMusic;
+            settingsOpen = false;
         }
         else
         {
-            Time.timeScale = 1f;
-            gameIsPaused = false;
-            gameIsPausedPublic = false;
-            audioSource.pitch = 1f;
+            if (slowTime.isSlowTime)
+            {
+                Time.timeScale = previousTime;
+                gameIsPaused = false;
+                gameIsPausedPublic = false;
+                audioSource.pitch = previousMusic;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                gameIsPaused = false;
+                gameIsPausedPublic = false;
+                audioSource.pitch = 1f;
+            }
+            pauseMenuUI.SetActive(false);
+            overlay.SetActive(true);
+
+            if (!startCountdown.canCount && Time.timeScale != 0f)
+            {
+                timer.canCount = true;
+            }
         }
-        pauseMenuUI.SetActive(false);
-        overlay.SetActive(true);
-        if (!startCountdown.canCount)
-        {
-            timer.canCount = true;
-        }
+        
     }
 
     void Pause()
@@ -108,7 +114,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         slowTime.isSlowTime = false;
         Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
     public void Restart()
     {

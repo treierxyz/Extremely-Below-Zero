@@ -9,20 +9,31 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText;
     private float startTime;
     public bool canCount = false;
+    //public bool tS = true;
     public float t;
     public float tOld;
     public string timeInHRF;
+    public PauseMenu pauseMenu;
+
     void Start()
     {
-        startTime = Time.fixedUnscaledTime;
+        startTime = Time.unscaledTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canCount)
+        /*if (tS)
         {
-            t = Time.fixedUnscaledTime - startTime + tOld;
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+        }*/
+        if (canCount && !pauseMenu.gameIsPausedPublic)
+        {
+            t = Time.unscaledTime - startTime + tOld;
             string minutes = ((int) Mathf.Floor(t) / 60).ToString("00");
             string seconds = (Mathf.Floor(t) % 60).ToString("00");
             timeInHRF = minutes + ":" + seconds;
@@ -36,6 +47,6 @@ public class Timer : MonoBehaviour
     public void SetOldTime()
     {
         tOld = t;
-        startTime = Time.fixedUnscaledTime;
+        startTime = Time.unscaledTime;
     }
 }

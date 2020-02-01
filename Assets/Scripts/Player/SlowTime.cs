@@ -10,6 +10,7 @@ public class SlowTime : MonoBehaviour
     public float slowDownDuration;
     public float slowDownRemaining;
     public bool isSlowTime = false;
+    public PauseMenu pauseMenu;
     private float fixedUnscaledDeltaTime;
     // Start is called before the first frame update
     void Awake()
@@ -40,7 +41,7 @@ public class SlowTime : MonoBehaviour
                 }
                 Time.fixedDeltaTime = this.fixedUnscaledDeltaTime * Time.timeScale;
             }
-            if (isSlowTime)
+            if (isSlowTime && !pauseMenu.gameIsPausedPublic)
             {
                 slowDownRemaining -= this.fixedUnscaledDeltaTime;
             }
@@ -55,7 +56,7 @@ public class SlowTime : MonoBehaviour
             audioSource.pitch = 1.0f;
             isSlowTime = false;
         }
-        if (slowDownRemaining <= slowDownDuration && !isSlowTime)
+        if (slowDownRemaining <= slowDownDuration && !isSlowTime && !pauseMenu.gameIsPausedPublic)
         {
             slowDownRemaining += this.fixedUnscaledDeltaTime;
         }
