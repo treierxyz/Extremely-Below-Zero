@@ -10,10 +10,12 @@ public class Finish : MonoBehaviour
     private SlowTime slowTime;
     private PlayerManger playerManger;
     private Rotator rotator;
+    private Flipper flipper;
     private Weapon weapon;
     public Animator playerAnimator;
     public Timer timer;
     public GameObject mainUIOverlay;
+    public PauseMenu pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,20 +23,22 @@ public class Finish : MonoBehaviour
         playerManger = character.GetComponent<PlayerManger>();
         rotator = character.GetComponentInChildren<Rotator>();
         weapon = character.GetComponentInChildren<Weapon>();
+        flipper = character.GetComponent<Flipper>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(finished);
         if (finished)
         {
             timer.canCount = false;
             playerAnimator.SetFloat("speed", 0f);
             slowTime.enabled = false;
-            playerManger.enabled = false;
+            playerManger.canMove = false;
             rotator.enabled = false;
             weapon.enabled = false;
+            pauseMenu.enabled = false;
+            flipper.enabled = false;
             mainUIOverlay.SetActive(false);
             levelComplete.SetActive(true);
         }

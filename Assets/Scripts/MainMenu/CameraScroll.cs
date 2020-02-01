@@ -7,7 +7,6 @@ public class CameraScroll : MonoBehaviour
     public GameObject cam;
     private float startpos;
     public float speed;
-    public bool ts1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,5 @@ public class CameraScroll : MonoBehaviour
     {
         cam.transform.position = new Vector3(startpos, transform.position.y, transform.position.z);
         startpos += speed;
-        if (ts1)
-        {
-            Time.timeScale = 1f;
-        }
     }
 }

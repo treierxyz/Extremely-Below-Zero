@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     public bool isReloading;
+    public bool canShoot = false;
     private bool isMBHeld;
     public bool machineGunMode = false;
     public PauseMenu PauseMenu;
@@ -29,13 +30,10 @@ public class Weapon : MonoBehaviour
         {
             if (timeBtwShots <= 0)
             {
-                if (Input.GetMouseButton(0) && !isMBHeld && !PauseMenu.gameIsPaused)
+                if (Input.GetMouseButton(0) && !isMBHeld && !PauseMenu.gameIsPaused && canShoot)
                 {
                     //Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
                     Instantiate(projectile, shotPoint.position, transform.rotation);
-                    Debug.Log(projectile);
-                    Debug.Log(shotPoint.position);
-                    Debug.Log(transform.rotation);
                     timeBtwShots = startTimeBtwShots;
                     clipSizeReal -= 1;
                     if (!machineGunMode)

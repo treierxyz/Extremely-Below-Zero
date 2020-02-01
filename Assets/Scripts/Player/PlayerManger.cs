@@ -16,7 +16,8 @@ public class PlayerManger : MonoBehaviour
     public float healthStart;
     public float health;
     public bool dead;
-	private Flipper flipper;
+    public bool canMove = false;
+    private Flipper flipper;
     public AudioSource audioSource;
     public AudioSource audioSourceDeath;
 
@@ -37,22 +38,30 @@ public class PlayerManger : MonoBehaviour
             dead = true;
             DeathMusic();
         }
+
         // Normal movement
-        moveInput = Input.GetAxisRaw("Horizontal");
-        float moveBy = moveInput * speed;
-        if (!dead)
+        if (canMove)
         {
-            rb.velocity = new Vector2(moveBy, rb.velocity.y);
+            moveInput = Input.GetAxis("Horizontal");
+            float moveBy = moveInput * speed;
+            if (!dead)
+            {
+                rb.velocity = new Vector2(moveBy, rb.velocity.y);
+            }
+
+            // Jumping
+            isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
         }
-        
-        // Jumping
-        isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true || Input.GetKeyDown(KeyCode.W) && isGrounded == true || Input.GetKeyDown(KeyCode.UpArrow) && isGrounded == true)
         {
-            if(PauseMenu.gameIsPaused == false)
+            if(!PauseMenu.gameIsPaused && canMove)
             {
                 rb.AddForce(jumpHeight * transform.up, ForceMode2D.Impulse);
                 isGrounded = false;

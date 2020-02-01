@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PressAnyScript : MonoBehaviour
 {
@@ -22,9 +23,7 @@ public class PressAnyScript : MonoBehaviour
         if(Input.anyKey && !pressed)
         {
             pressed = true;
-            pressAny.SetActive(false);
-            buttons.SetActive(true);
-            title.SetActive(true);
+            Pressed();
         }
     }
     public void backToPress()
@@ -37,5 +36,11 @@ public class PressAnyScript : MonoBehaviour
     public void TriggerTitle()
     {
         animatorT.SetTrigger("transition");
+    }
+    public void Pressed()
+    {
+        pressAny.SetActive(false);
+        buttons.SetActive(true);
+        title.SetActive(true);
     }
 }

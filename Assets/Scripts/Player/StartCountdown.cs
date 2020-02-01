@@ -12,11 +12,11 @@ public class StartCountdown : MonoBehaviour
     public GameObject gsiText;
     public GameObject character;
     public GameObject UI;
+    public PauseMenu pauseMenu;
     private SlowTime slowTime;
     private PlayerManger playerManger;
     private Rotator rotator;
     private Weapon weapon;
-    public GameObject timer;
     private Timer timerScript;
     public bool canCount = true;
     private bool doOnce = false;
@@ -26,17 +26,22 @@ public class StartCountdown : MonoBehaviour
     {
         slowTime = character.GetComponent<SlowTime>();
         playerManger = character.GetComponent<PlayerManger>();
-        rotator = character.GetComponentInChildren<Rotator>();
         weapon = character.GetComponentInChildren<Weapon>();
-        timerScript = timer.GetComponent<Timer>();
+        timerScript = UI.GetComponent<Timer>();
     }
     void Update()
-    {
-        timeLeft -= Time.unscaledDeltaTime;
+    {    
+        if (timeLeft >= 0.0f && !pauseMenu.gameIsPausedPublic)
+        {
+            canCount = true;
+        }
         if (timeLeft >= 0.0f && canCount)
         {
+            if (!pauseMenu.gameIsPausedPublic)
+            {
+                timeLeft -= Time.deltaTime;
+            }
             startText.text = Mathf.Floor(timeLeft+1).ToString("F0");
-            
         }
         else if (timeLeft <= 0.0f && !doOnce)
         {
@@ -44,11 +49,14 @@ public class StartCountdown : MonoBehaviour
             canCount = false;
             doOnce = true;
             gsiText.SetActive(false);
-            UI.SetActive(true);
             slowTime.enabled = true;
-            playerManger.enabled = true;
-            weapon.enabled = true;
+            playerManger.canMove = true;
+            weapon.canShoot = true;
             timerScript.canCount = true;
+        }
+        if (timeLeft <= 0.0f && !PauseMenu.gameIsPaused)
+        {
+            timeLeft -= Time.deltaTime;
         }
         if (timeLeft <= -3.0f && !doOnce2)
         {

@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject audioSourceObject;
     public static bool gameIsPaused = false;
+    public bool gameIsPausedPublic = false;
     public GameObject pauseMenuUI;
     public GameObject pauseMenuButtons;
     public GameObject settings;
@@ -39,45 +40,49 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+        if (gameIsPaused)
+        {
+            timer.SetOldTime();
+        }
     }
     public void Resume()
-    {
-        if (!startCountdown.canCount)
-        {
-            timer.canCount = true;
-        }
-        
+    {   
         if (settingsOpen)
         {
             pauseMenuButtons.SetActive(true);
             settings.SetActive(false);
         }
-        
-        pauseMenuUI.SetActive(false);
-        overlay.SetActive(true);
-
         if(slowTime.isSlowTime)
         {
             Time.timeScale = previousTime;
             gameIsPaused = false;
+            gameIsPausedPublic = false;
             audioSource.pitch = previousMusic;
         }
         else
         {
             Time.timeScale = 1f;
             gameIsPaused = false;
+            gameIsPausedPublic = false;
             audioSource.pitch = 1f;
+        }
+        pauseMenuUI.SetActive(false);
+        overlay.SetActive(true);
+        if (!startCountdown.canCount)
+        {
+            timer.canCount = true;
         }
     }
 
     void Pause()
     {
         timer.canCount = false;
+        gameIsPaused = true;
+        gameIsPausedPublic = true;
         overlay.SetActive(false);
         pauseMenuUI.SetActive(true);
         previousTime = Time.timeScale;
         Time.timeScale = 0f;
-        gameIsPaused = true;
         previousMusic = audioSource.pitch;
         audioSource.pitch = 0.0f;
     }
