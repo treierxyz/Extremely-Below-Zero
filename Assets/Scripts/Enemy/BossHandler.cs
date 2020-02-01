@@ -8,9 +8,7 @@ public class BossHandler : MonoBehaviour
     public float timeBtwHits;
     private float alsotimeBtwHits;
     private bool Hit;
-
     
-
     private void FixedUpdate()
     {
         if (health <= 0) 
