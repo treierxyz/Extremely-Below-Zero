@@ -6,6 +6,8 @@ public class Weapon : MonoBehaviour
 {
     public GameObject projectile;
     //public GameObject shotEffect;
+    public AudioSource shootSource;
+    public AudioClip lazerSound;
     public Transform shotPoint;
     public float clipSize;
     public float clipSizeReal;
@@ -34,6 +36,7 @@ public class Weapon : MonoBehaviour
                 {
                     //Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
                     Instantiate(projectile, shotPoint.position, transform.rotation);
+                    shootSource.PlayOneShot(lazerSound, 1);
                     timeBtwShots = startTimeBtwShots;
                     clipSizeReal -= 1;
                     if (!machineGunMode)
