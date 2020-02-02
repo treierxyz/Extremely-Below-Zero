@@ -16,7 +16,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 4.5
+  m_ExitTime: 4.3
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -124,7 +124,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MainCwalkAnim
-  m_Speed: 1
+  m_Speed: 0.41
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
