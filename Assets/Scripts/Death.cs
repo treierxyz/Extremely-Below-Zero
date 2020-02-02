@@ -42,6 +42,5 @@ public class Death : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-
 }
 

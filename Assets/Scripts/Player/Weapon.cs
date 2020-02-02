@@ -72,7 +72,6 @@ public class Weapon : MonoBehaviour
                 isReloading = true;
                 reloadTimeHidden -= Time.fixedDeltaTime;
             }
-            
         }
 	}
 }

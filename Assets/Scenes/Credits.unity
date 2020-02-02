@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1109998695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 640, y: 360}
-  m_ScreenMatchMode: 1
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1329,7 +1329,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1944556944066374696, guid: 6d35b655906fb0b5a89cbd1af4794182,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 3fd14c475edc880aab4d1f37e8208920, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d1d403ec038b91041b472bb16e36848d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

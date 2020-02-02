@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public GameObject player;
+    public CanSeeScript cansee;
     private float posDif;
     private Rigidbody2D rb;
     public float enemySpeed;
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        if (inVision)
+        if (cansee.inVision)
             {
             posDif = player.transform.position.x - transform.position.x;
             if(posDif >= 5 || posDif < 0 && posDif > -2.5)
@@ -43,19 +44,5 @@ public class Enemy : MonoBehaviour
     {
         //Instantiate(explosion, transform.position, Quaternion.identity);
         health -= damage;
-    }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.tag == "Player") 
-        {
-            inVision = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if(col.tag == "Player") 
-        {
-            inVision = false;
-        }
     }
 }

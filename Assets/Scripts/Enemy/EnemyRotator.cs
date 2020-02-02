@@ -6,18 +6,12 @@ public class EnemyRotator : MonoBehaviour
 {
     public GameObject rotated;
     public GameObject player;
-    public GameObject enemy;
-    private Enemy enemyEnemy;
-    private Transform enemyTrans;
+    public Transform enemyTrans;
+    public CanSeeScript cansee;
     private bool flipped = false;
-    void Awake()
-    {
-        enemyEnemy = enemy.GetComponent<Enemy>();
-        enemyTrans = enemy.GetComponent<Transform>();
-    }
     private void FixedUpdate()
     {
-        if (enemyEnemy.inVision)
+        if (cansee.inVision)
         {
             Vector3 difference = player.transform.position - transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponEnemy : MonoBehaviour
 {
     public GameObject projectile;
-    public Enemy enemy;
+    public CanSeeScript cansee;
     public Transform shotPoint;
     public float clipSize;
     private float clipSizeReal;
@@ -25,7 +25,7 @@ public class WeaponEnemy : MonoBehaviour
     {
         if(clipSizeReal > 0 && isReloading == false)
         {
-            if (timeBtwShots <= 0 && enemy.inVision)
+            if (timeBtwShots <= 0 && cansee.inVision)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
