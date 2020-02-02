@@ -14,6 +14,7 @@ public class Death : MonoBehaviour
     public Animator animator;
     public Timer timer;
     public GameObject mainUIOverlay;
+    private bool doOnce = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerManger.dead)
+        if (playerManger.dead && !doOnce)
         {
             timer.canCount = false;
             animator.SetFloat("speed", 0f);
@@ -40,6 +41,7 @@ public class Death : MonoBehaviour
             mainUIOverlay.SetActive(false);
             deathScreen.SetActive(true);
             Time.timeScale = 0f;
+            doOnce = true;
         }
     }
 }
