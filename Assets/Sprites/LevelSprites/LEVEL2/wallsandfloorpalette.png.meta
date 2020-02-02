@@ -1,0 +1,1252 @@
+fileFormatVersion: 2
+guid: b14015ff266d1cb189baf4bb96bc2523
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3416449737846482534
+    second: wallsandfloorpalette_0
+  - first:
+      213: 2318274916543132619
+    second: wallsandfloorpalette_1
+  - first:
+      213: 6451206111734595787
+    second: wallsandfloorpalette_2
+  - first:
+      213: -4335408548833672039
+    second: wallsandfloorpalette_3
+  - first:
+      213: 5474054419099002591
+    second: wallsandfloorpalette_4
+  - first:
+      213: -3729100973218858339
+    second: wallsandfloorpalette_5
+  - first:
+      213: 6781055471466608467
+    second: wallsandfloorpalette_6
+  - first:
+      213: -2992826315551401197
+    second: wallsandfloorpalette_7
+  - first:
+      213: -7252792603907393328
+    second: wallsandfloorpalette_8
+  - first:
+      213: -2967338810228638959
+    second: wallsandfloorpalette_9
+  - first:
+      213: 8602605944151921336
+    second: wallsandfloorpalette_10
+  - first:
+      213: -7018714198924118302
+    second: wallsandfloorpalette_11
+  - first:
+      213: -6772167949415809093
+    second: wallsandfloorpalette_12
+  - first:
+      213: 8310994189860256670
+    second: wallsandfloorpalette_13
+  - first:
+      213: -4292125723144933202
+    second: wallsandfloorpalette_14
+  - first:
+      213: 2265728822505380831
+    second: wallsandfloorpalette_15
+  - first:
+      213: 7940495026434356298
+    second: wallsandfloorpalette_16
+  - first:
+      213: -1231590128117902486
+    second: wallsandfloorpalette_17
+  - first:
+      213: 3512892289515253841
+    second: wallsandfloorpalette_18
+  - first:
+      213: 587231585281486723
+    second: wallsandfloorpalette_19
+  - first:
+      213: 5523002080377228491
+    second: wallsandfloorpalette_20
+  - first:
+      213: 8933691102300344292
+    second: wallsandfloorpalette_21
+  - first:
+      213: -8259020237932998638
+    second: wallsandfloorpalette_22
+  - first:
+      213: -8404684325139826334
+    second: wallsandfloorpalette_23
+  - first:
+      213: -7666426796385081206
+    second: wallsandfloorpalette_0
+  - first:
+      213: -3241771172995029697
+    second: wallsandfloorpalette_1
+  - first:
+      213: -4599124322253461605
+    second: wallsandfloorpalette_2
+  - first:
+      213: 7503818314609838748
+    second: wallsandfloorpalette_3
+  - first:
+      213: 8846876154001593637
+    second: wallsandfloorpalette_4
+  - first:
+      213: 5107671590476172921
+    second: wallsandfloorpalette_5
+  - first:
+      213: -1200634585680233799
+    second: wallsandfloorpalette_6
+  - first:
+      213: -940974946873085221
+    second: wallsandfloorpalette_7
+  - first:
+      213: 5780056565841803653
+    second: wallsandfloorpalette_8
+  - first:
+      213: -1832079834400511610
+    second: wallsandfloorpalette_9
+  - first:
+      213: 7998435941066193808
+    second: wallsandfloorpalette_10
+  - first:
+      213: 1007348074963142654
+    second: wallsandfloorpalette_11
+  - first:
+      213: 318555243730751411
+    second: wallsandfloorpalette_12
+  - first:
+      213: -1977474887771314436
+    second: wallsandfloorpalette_13
+  - first:
+      213: 8757476687298493899
+    second: wallsandfloorpalette_14
+  - first:
+      213: -7615913371352249083
+    second: wallsandfloorpalette_15
+  - first:
+      213: 3594519643688082416
+    second: wallsandfloorpalette_16
+  - first:
+      213: -1823278044326340972
+    second: wallsandfloorpalette_17
+  - first:
+      213: 1225428426094439291
+    second: wallsandfloorpalette_18
+  - first:
+      213: 6625392335983103152
+    second: wallsandfloorpalette_19
+  - first:
+      213: -1621020563617810692
+    second: wallsandfloorpalette_20
+  - first:
+      213: -2492089664985515561
+    second: wallsandfloorpalette_21
+  - first:
+      213: 1226081398414605938
+    second: wallsandfloorpalette_22
+  - first:
+      213: 8339365256127381326
+    second: wallsandfloorpalette_23
+  - first:
+      213: 6591414232463564283
+    second: wallsandfloorpalette_24
+  - first:
+      213: 8890352317681549754
+    second: wallsandfloorpalette_25
+  - first:
+      213: -3206491989803137912
+    second: wallsandfloorpalette_26
+  - first:
+      213: -7856384113308018263
+    second: wallsandfloorpalette_27
+  - first:
+      213: 7595522673530057648
+    second: wallsandfloorpalette_28
+  - first:
+      213: -2891799083667601783
+    second: wallsandfloorpalette_29
+  - first:
+      213: 6163950973032555271
+    second: wallsandfloorpalette_30
+  - first:
+      213: -6386435218203604642
+    second: wallsandfloorpalette_31
+  - first:
+      213: -3419809432596084676
+    second: wallsandfloorpalette_32
+  - first:
+      213: 1750931300811292575
+    second: wallsandfloorpalette_24
+  - first:
+      213: 8903643010562806433
+    second: wallsandfloorpalette_25
+  - first:
+      213: 656485578555146833
+    second: wallsandfloorpalette_26
+  - first:
+      213: -6213699262582715757
+    second: wallsandfloorpalette_27
+  - first:
+      213: -9122889406188461301
+    second: wallsandfloorpalette_28
+  - first:
+      213: 4720843121107837529
+    second: wallsandfloorpalette_29
+  - first:
+      213: -8450717661942991015
+    second: wallsandfloorpalette_30
+  - first:
+      213: -4660769397786834872
+    second: wallsandfloorpalette_31
+  - first:
+      213: 1837919517637186341
+    second: wallsandfloorpalette_33
+  - first:
+      213: 6230887021891093463
+    second: wallsandfloorpalette_34
+  - first:
+      213: 3202665480943514165
+    second: wallsandfloorpalette_32
+  - first:
+      213: 8336738468523203372
+    second: wallsandfloorpalette_33
+  - first:
+      213: -9077966761883495946
+    second: wallsandfloorpalette_34
+  - first:
+      213: 6953632956783795123
+    second: wallsandfloorpalette_35
+  - first:
+      213: 8665061234259056953
+    second: wallsandfloorpalette_36
+  - first:
+      213: -8629760500215979078
+    second: wallsandfloorpalette_37
+  - first:
+      213: 4143797239347454459
+    second: wallsandfloorpalette_38
+  - first:
+      213: -8445738246884615261
+    second: wallsandfloorpalette_39
+  - first:
+      213: -2459982050308313636
+    second: wallsandfloorpalette_40
+  - first:
+      213: 2489655347140798298
+    second: wallsandfloorpalette_41
+  - first:
+      213: -2549287429382203370
+    second: wallsandfloorpalette_42
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wallsandfloorpalette_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a886ee872716b9590800000000000000
+      internalID: -7666426796385081206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35a7863b4ae203d0800000000000000
+      internalID: -3241771172995029697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97293ecbc0ac20c0800000000000000
+      internalID: -4599124322253461605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 346
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ac36d000be22860800000000000000
+      internalID: 7503818314609838748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 314
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52593234dfa66ca70800000000000000
+      internalID: 8846876154001593637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 314
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ecfabff3812e640800000000000000
+      internalID: 5107671590476172921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 314
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba3b7f943d765fe0800000000000000
+      internalID: -1200634585680233799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 314
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd27615754cf0f2f0800000000000000
+      internalID: -940974946873085221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5893aa492d2e63050800000000000000
+      internalID: 5780056565841803653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 282
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689a66ee8152396e0800000000000000
+      internalID: -1832079834400511610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 282
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bb7f16c17200f60800000000000000
+      internalID: 7998435941066193808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 282
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef70a5dacb1dafd00800000000000000
+      internalID: 1007348074963142654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfc8ef6e4cbb6400800000000000000
+      internalID: 318555243730751411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 250
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6a22211199e84e0800000000000000
+      internalID: -1977474887771314436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 250
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdf033e5aec88970800000000000000
+      internalID: 8757476687298493899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 250
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dc66cb327de4690800000000000000
+      internalID: -7615913371352249083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 218
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb1134429c42e130800000000000000
+      internalID: 3594519643688082416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 218
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496d821674a62b6e0800000000000000
+      internalID: -1823278044326340972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 218
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b660339a8910110800000000000000
+      internalID: 1225428426094439291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 218
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc4edb0a3f12fb50800000000000000
+      internalID: 6625392335983103152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6f4fbc26af089e0800000000000000
+      internalID: -1621020563617810692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 186
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9bd1247a15a6dd0800000000000000
+      internalID: -2492089664985515561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 186
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e773a298ae30110800000000000000
+      internalID: 1226081398414605938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 186
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ff4bf34806bb370800000000000000
+      internalID: 8339365256127381326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f38f2cdbe8c4810800000000000000
+      internalID: 1750931300811292575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 154
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a25c730528109b70800000000000000
+      internalID: 8903643010562806433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 154
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15242fdc72e4c1900800000000000000
+      internalID: 656485578555146833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 154
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a86a8317184c9a0800000000000000
+      internalID: -6213699262582715757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0366f29b6cf46180800000000000000
+      internalID: -9122889406188461301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 122
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952aaf97ecdc38140800000000000000
+      internalID: 4720843121107837529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 122
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957b4ce6f0509ba80800000000000000
+      internalID: -8450717661942991015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 122
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84887e03dee915fb0800000000000000
+      internalID: -4660769397786834872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5323b065947227c20800000000000000
+      internalID: 3202665480943514165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 90
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bd8a9977b02b370800000000000000
+      internalID: 8336738468523203372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 90
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f19123c355940280800000000000000
+      internalID: -9077966761883495946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 90
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb1c8f0554408060800000000000000
+      internalID: 6953632956783795123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939d409784b704870800000000000000
+      internalID: 8665061234259056953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 58
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3ede72c8eec3880800000000000000
+      internalID: -8629760500215979078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 58
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1ac8862a9b18930800000000000000
+      internalID: 4143797239347454459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab1388dfc5baca80800000000000000
+      internalID: -8445738246884615261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 26
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd2989db536cddd0800000000000000
+      internalID: -2459982050308313636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 26
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57aa73f8580d8220800000000000000
+      internalID: 2489655347140798298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsandfloorpalette_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 26
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6181e45f69c1f9cd0800000000000000
+      internalID: -2549287429382203370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
