@@ -48,37 +48,49 @@ public class BossHandler : MonoBehaviour
 
 
     private float attackChoice;
-    private bool attackDone;
+    private bool attackDone = true;
     private float timeBtwAttacks = 2f;
-    private float alsoTimeBtwAttacks;
-    public GameObject bossDefault;
+    private float alsoTimeBtwAttacks = 0f;
+    public GameObject BossDefault;
+    public GameObject AttackPos1;
+    public GameObject AttackPos2;
     private Rigidbody2D rb;
+    private bool returning = true;
 
     private void Start()
     {
-        alsoTimeBtwAttacks = timeBtwAttacks;
-        attackDone = true;
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
+        if(returning == true)
+        {
+            Vector2 a = BossDefault.gameObject.transform.position - gameObject.transform.position;
+            gameObject.transform.Translate(a / 100);
+        }
+        if(gameObject.transform.position == BossDefault.gameObject.transform.position && returning == true)
+        {
+            returning = false;
+            attackDone = true;
+            alsoTimeBtwAttacks = timeBtwAttacks;
+        }
         if(attackDone == true)
         {
             if (alsoTimeBtwAttacks <= 0)
             {
                 attackChoice = Random.Range(1, 4);
-                if(attackChoice == 1.0)
+                if(attackChoice == 1)
                 {
                     Attack1();
                 }
-                if(attackChoice == 2.0)
+                if(attackChoice == 2)
                 {
-                    Attack2();
+                    Attack1();
                 } 
-                if(attackChoice == 3.0)
+                if(attackChoice == 3)
                 {
-                    Attack3();
+                    Attack1();
                 } 
             }
             else
@@ -86,36 +98,52 @@ public class BossHandler : MonoBehaviour
                 alsoTimeBtwAttacks -= Time.fixedDeltaTime;
             }
         }
+        
     }
     private void Attack1()
     {
         attackDone = false;
-        
-        if(gameObject.transform.position == bossDefault.gameObject.transform.position)
+        Vector2 b = AttackPos1.gameObject.transform.position - gameObject.transform.position;
+        gameObject.transform.Translate(b / 100);
+        if(gameObject.transform.position == AttackPos1.gameObject.transform.position)
         {
-            attackDone = true;
-            Debug.Log("1");
-            alsoTimeBtwAttacks = timeBtwAttacks;
+            Vector2 c = AttackPos2.gameObject.transform.position - gameObject.transform.position;
+            gameObject.transform.Translate(c / 100);
         }
+        if(gameObject.transform.position == AttackPos2.gameObject.transform.position)
+        {
+            returning = true;
+        }
+        
     }
     private void Attack2()
     {
         attackDone = false;
-        if(gameObject.transform.position == bossDefault.gameObject.transform.position)
+        Vector2 b = AttackPos1.gameObject.transform.position - gameObject.transform.position;
+        gameObject.transform.Translate(b / 100);
+        if(gameObject.transform.position == AttackPos1.gameObject.transform.position)
         {
-            attackDone = true;
-            Debug.Log("2");
-            alsoTimeBtwAttacks = timeBtwAttacks;
+            Vector2 c = AttackPos2.gameObject.transform.position - gameObject.transform.position;
+            gameObject.transform.Translate(c / 100);
+        }
+        if(gameObject.transform.position == AttackPos2.gameObject.transform.position)
+        {
+            returning = true;
         }
     }
     private void Attack3()
     {
         attackDone = false;
-        if(gameObject.transform.position == bossDefault.gameObject.transform.position)
+        Vector2 b = AttackPos1.gameObject.transform.position - gameObject.transform.position;
+        gameObject.transform.Translate(b / 100);
+        if(gameObject.transform.position == AttackPos1.gameObject.transform.position)
         {
-            attackDone = true;
-            Debug.Log("3");
-            alsoTimeBtwAttacks = timeBtwAttacks;
+            Vector2 c = AttackPos2.gameObject.transform.position - gameObject.transform.position;
+            gameObject.transform.Translate(c / 100);
+        }
+        if(gameObject.transform.position == AttackPos2.gameObject.transform.position)
+        {
+            returning = true;
         }
     }
 
