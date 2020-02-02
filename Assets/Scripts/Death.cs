@@ -39,6 +39,7 @@ public class Death : MonoBehaviour
             flipper.enabled = false;
             mainUIOverlay.SetActive(false);
             deathScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
