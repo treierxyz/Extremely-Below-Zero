@@ -18,7 +18,7 @@ public class PauseMenuCredits : MonoBehaviour
     private float previousMusic;
     private float fixedDeltaTime;
     private bool settingsOpen = false;
-    public GameObject overlay;
+    //public GameObject overlay;
     // Update is called once per frame
     void Awake()
     {
@@ -54,7 +54,7 @@ public class PauseMenuCredits : MonoBehaviour
             gameIsPausedPublic = false;
             audioSource.pitch = 1f;
             pauseMenuUI.SetActive(false);
-            overlay.SetActive(true);
+            //overlay.SetActive(true);
         }
         
     }
@@ -63,7 +63,7 @@ public class PauseMenuCredits : MonoBehaviour
     {
         gameIsPaused = true;
         gameIsPausedPublic = true;
-        overlay.SetActive(false);
+        //overlay.SetActive(false);
         pauseMenuUI.SetActive(true);
         previousTime = Time.timeScale;
         Time.timeScale = 0f;
