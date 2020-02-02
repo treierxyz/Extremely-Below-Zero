@@ -12,7 +12,10 @@ public class SettingsMenu : MonoBehaviour
     public GameObject musicFill;
     public GameObject soundSlider;
     public GameObject soundFill;
+    public TMP_Dropdown qualityDropdown;
     public TMP_Dropdown resolutionDropdown;
+    private float musVolumeGot;
+    private float sfxVolumeGot;
     private Slider musSlider;
     private Slider sfxSlider;
     private float musicVolume = 0.0f;
@@ -37,14 +40,31 @@ public class SettingsMenu : MonoBehaviour
                 currentResolutionIndex = i;
             }
         }
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        if (options.Count == 0)
+        {   
+            options.Add("No options");
+            resolutionDropdown.AddOptions(options);
+            resolutionDropdown.RefreshShownValue();
+        }
+        else
+        {
+            resolutionDropdown.AddOptions(options);
+            resolutionDropdown.value = currentResolutionIndex;
+            resolutionDropdown.RefreshShownValue();
+        }
     }
     void Awake()
     {
+        //Sound sliders
         musSlider = musicSlider.GetComponent<Slider>();
         sfxSlider = soundSlider.GetComponent<Slider>();
+        audioMixer.GetFloat("musicVolume", out musVolumeGot);
+        audioMixer.GetFloat("sfxVolume", out sfxVolumeGot);
+        musSlider.value = musVolumeGot;
+        sfxSlider.value = sfxVolumeGot;
+        //Quality
+        int qualityLevel = QualitySettings.GetQualityLevel();
+        qualityDropdown.value = qualityLevel;
     }
 
     public void SetMusicVolume(float volume)
@@ -91,6 +111,11 @@ public class SettingsMenu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
+        public void SetResolution (int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
@@ -106,10 +131,4 @@ public class SettingsMenu : MonoBehaviour
             QualitySettings.vSyncCount = 0;
         }
     }
-    public void SetResolution (int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-
 }

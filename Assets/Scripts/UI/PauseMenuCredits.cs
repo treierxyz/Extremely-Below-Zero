@@ -12,7 +12,6 @@ public class PauseMenuCredits : MonoBehaviour
     public GameObject pauseMenuButtons;
     public GameObject settings;
     public GameObject mainCharacter;
-    private SlowTime slowTime;
     private AudioSource audioSource;
     private float previousTime;
     private float previousMusic;
@@ -22,7 +21,6 @@ public class PauseMenuCredits : MonoBehaviour
     // Update is called once per frame
     void Awake()
     {
-        slowTime = mainCharacter.GetComponent<SlowTime>();
         audioSource = audioSourceObject.GetComponent<AudioSource>();
         this.fixedDeltaTime = Time.fixedDeltaTime;
     }
@@ -90,7 +88,6 @@ public class PauseMenuCredits : MonoBehaviour
         gameIsPaused = false;
         audioSource.pitch = 1f;
         pauseMenuUI.SetActive(false);
-        slowTime.isSlowTime = false;
         Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
@@ -100,7 +97,6 @@ public class PauseMenuCredits : MonoBehaviour
         gameIsPaused = false;
         audioSource.pitch = 1f;
         pauseMenuUI.SetActive(false);
-        slowTime.isSlowTime = false;
         Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex, LoadSceneMode.Single);
