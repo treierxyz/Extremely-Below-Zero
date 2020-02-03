@@ -13,9 +13,12 @@ public class Finish : MonoBehaviour
     private Flipper flipper;
     private Weapon weapon;
     public Animator playerAnimator;
+    public Animator leftDoorAnimator;
+    public Animator rightDoorAnimator;
     public Timer timer;
     public GameObject mainUIOverlay;
     public PauseMenu pauseMenu;
+    private bool doOnce = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,18 +32,22 @@ public class Finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (finished)
+        if (finished && !doOnce)
         {
             timer.canCount = false;
-            playerAnimator.SetFloat("speed", 0f);
-            slowTime.enabled = false;
             playerManger.canMove = false;
+            playerAnimator.SetFloat("speed", 0f);
+            playerAnimator.SetTrigger("finishTrigger");
+            leftDoorAnimator.SetTrigger("finishTrigger");
+            rightDoorAnimator.SetTrigger("finishTrigger");
+            slowTime.enabled = false;
             rotator.enabled = false;
             weapon.enabled = false;
             pauseMenu.enabled = false;
             flipper.enabled = false;
             mainUIOverlay.SetActive(false);
             levelComplete.SetActive(true);
+            doOnce = true;
         }
     }
 
