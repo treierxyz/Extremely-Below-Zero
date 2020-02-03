@@ -11,6 +11,6 @@ public class CompleteTime : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        timerText.text = "TIME       " + timer.timeInHRF;
+        timerText.text = "TIME:\n" + timer.timeInHRF;
     }
 }

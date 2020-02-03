@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Globalization;
 
 public class Timer : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Timer : MonoBehaviour
     public float tOld;
     public string timeInHRF;
     public PauseMenu pauseMenu;
+    NumberFormatInfo nfi = new CultureInfo( "en-US", false ).NumberFormat;
 
     void Start()
     {
@@ -23,19 +25,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (tS)
-        {
-            Time.timeScale = 1f;
-        }
-        else
-        {
-            Time.timeScale = 0f;
-        }*/
         if (canCount && !pauseMenu.gameIsPausedPublic)
         {
             t = Time.unscaledTime - startTime + tOld;
             string minutes = ((int) Mathf.Floor(t) / 60).ToString("00");
-            string seconds = (Mathf.Floor(t) % 60).ToString("00");
+            string seconds = (t % 60).ToString("00.000", nfi);
             timeInHRF = minutes + ":" + seconds;
             timerText.text = timeInHRF;
         }
