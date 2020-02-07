@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour
 {
     public void PlayGame(int index)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + index);
+        SceneManager.LoadScene(index);
     }
     public void QuitGame()
     {
