@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Player")) 
             {
-                hitInfo.collider.GetComponent<PlayerManger>().TakeDamage(damage);
+                hitInfo.collider.GetComponent<PlayerManager>().TakeDamage(damage);
             }
             DestroyProjectile();
         }

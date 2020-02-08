@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManger : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public float speed;
     private float moveInput;
@@ -59,7 +59,7 @@ public class PlayerManger : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true || Input.GetKeyDown(KeyCode.W) && isGrounded == true || Input.GetKeyDown(KeyCode.UpArrow) && isGrounded == true)
+        if(Input.GetButtonDown("Jump") && isGrounded == true)
         {
             if(!PauseMenu.gameIsPaused && canMove)
             {

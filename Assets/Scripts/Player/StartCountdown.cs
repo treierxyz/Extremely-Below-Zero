@@ -14,7 +14,7 @@ public class StartCountdown : MonoBehaviour
     public GameObject UI;
     public PauseMenu pauseMenu;
     private SlowTime slowTime;
-    private PlayerManger playerManger;
+    private PlayerManager playerManager;
     private Rotator rotator;
     private Weapon weapon;
     private Timer timerScript;
@@ -25,7 +25,7 @@ public class StartCountdown : MonoBehaviour
     void Start()
     {
         slowTime = character.GetComponent<SlowTime>();
-        playerManger = character.GetComponent<PlayerManger>();
+        playerManager = character.GetComponent<PlayerManager>();
         weapon = character.GetComponentInChildren<Weapon>();
         timerScript = UI.GetComponent<Timer>();
     }
@@ -50,7 +50,7 @@ public class StartCountdown : MonoBehaviour
             doOnce = true;
             gsiText.SetActive(false);
             slowTime.enabled = true;
-            playerManger.canMove = true;
+            playerManager.canMove = true;
             weapon.canShoot = true;
             timerScript.canCount = true;
         }

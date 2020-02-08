@@ -31,7 +31,7 @@ public class BossHandler : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Player") && Hit == true)
         {
-            col.gameObject.GetComponent<PlayerManger>().TakeDamage(1);
+            col.gameObject.GetComponent<PlayerManager>().TakeDamage(1);
             alsotimeBtwHits = timeBtwHits;
         }
     }

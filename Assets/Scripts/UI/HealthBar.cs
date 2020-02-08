@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public GameObject healthBar;
     public GameObject character;
-    private PlayerManger playerManger;
+    private PlayerManager playerManager;
     private float currentValue = 0f;
     public float CurrentValue {
     get {
@@ -24,14 +24,14 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerManger = character.GetComponent<PlayerManger>();
+        playerManager = character.GetComponent<PlayerManager>();
         CurrentValue = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CurrentValue = playerManger.health/playerManger.healthStart;
-        healthDisplay.text = (playerManger.health).ToString();
+        CurrentValue = playerManager.health/playerManager.healthStart;
+        healthDisplay.text = (playerManager.health).ToString();
     }
 }

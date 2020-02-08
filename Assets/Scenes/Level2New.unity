@@ -21190,31 +21190,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3265709885643281713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3265709885643281714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de610c7bf6fc0544faa4f015ee238d4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jumpHeight: 80
-  groundTest: {fileID: 3265709886389756025}
-  checkRadius: 0.2
-  ground:
-    serializedVersion: 2
-    m_Bits: 256
-  healthStart: 10
-  health: 0
-  dead: 0
-  canMove: 0
-  audioSource: {fileID: 4170874090960999770}
-  audioSourceDeath: {fileID: 1499626683}
 --- !u!1 &3265709885643281714
 GameObject:
   m_ObjectHideFlags: 0
@@ -21226,12 +21201,13 @@ GameObject:
   - component: {fileID: 3265709885643281725}
   - component: {fileID: 3265709885643281726}
   - component: {fileID: 3265709885643281716}
+  - component: {fileID: 3265709885643281718}
   - component: {fileID: 3265709885643281712}
-  - component: {fileID: 3265709885643281713}
   - component: {fileID: 3265709885643281724}
   - component: {fileID: 3265709885643281715}
   - component: {fileID: 3265709885643281723}
   - component: {fileID: 3265709885643281717}
+  - component: {fileID: 3265709885643281719}
   m_Layer: 10
   m_Name: MainCAR
   m_TagString: Player
@@ -21286,6 +21262,45 @@ MonoBehaviour:
   animator: {fileID: 3265709885643281723}
   timer: {fileID: 5066108586726607956}
   mainUIOverlay: {fileID: 5066108587205257390}
+--- !u!114 &3265709885643281718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265709885643281714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8fb4f12c4d970399238113fe8c9063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpHeight: 80
+  groundTest: {fileID: 3265709886389756025}
+  checkRadius: 0.22
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
+  healthStart: 10
+  health: 0
+  dead: 0
+  canMove: 0
+  audioSource: {fileID: 4170874090960999770}
+  audioSourceDeath: {fileID: 1499626683}
+--- !u!114 &3265709885643281719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265709885643281714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e008ff6c628b6e2e8c15977dce5415e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 3
+  lowJumpMultiplier: 7
 --- !u!95 &3265709885643281723
 Animator:
   serializedVersion: 3

@@ -7,7 +7,7 @@ public class Death : MonoBehaviour
     public GameObject deathScreen;
     public GameObject character;
     private SlowTime slowTime;
-    private PlayerManger playerManger;
+    private PlayerManager playerManager;
     private Rotator rotator;
     private Weapon weapon;
     private Flipper flipper;
@@ -20,7 +20,7 @@ public class Death : MonoBehaviour
     void Start()
     {
         slowTime = character.GetComponent<SlowTime>();
-        playerManger = character.GetComponent<PlayerManger>();
+        playerManager = character.GetComponent<PlayerManager>();
         rotator = character.GetComponentInChildren<Rotator>();
         weapon = character.GetComponentInChildren<Weapon>();
         flipper = character.GetComponentInChildren<Flipper>();
@@ -29,12 +29,12 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerManger.dead && !doOnce)
+        if (playerManager.dead && !doOnce)
         {
             timer.canCount = false;
             animator.SetFloat("speed", 0f);
             slowTime.enabled = false;
-            playerManger.enabled = false;
+            playerManager.enabled = false;
             rotator.enabled = false;
             weapon.enabled = false;
             flipper.enabled = false;

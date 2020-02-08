@@ -8,7 +8,7 @@ public class Finish : MonoBehaviour
     public GameObject levelComplete;
     public GameObject character;
     private SlowTime slowTime;
-    private PlayerManger playerManger;
+    private PlayerManager playerManager;
     private Rotator rotator;
     private Flipper flipper;
     private Weapon weapon;
@@ -23,7 +23,7 @@ public class Finish : MonoBehaviour
     void Start()
     {
         slowTime = character.GetComponent<SlowTime>();
-        playerManger = character.GetComponent<PlayerManger>();
+        playerManager = character.GetComponent<PlayerManager>();
         rotator = character.GetComponentInChildren<Rotator>();
         weapon = character.GetComponentInChildren<Weapon>();
         flipper = character.GetComponent<Flipper>();
@@ -35,7 +35,7 @@ public class Finish : MonoBehaviour
         if (finished && !doOnce)
         {
             timer.canCount = false;
-            playerManger.canMove = false;
+            playerManager.canMove = false;
             playerAnimator.SetFloat("speed", 0f);
             playerAnimator.SetTrigger("finishTrigger");
             leftDoorAnimator.SetTrigger("finishTrigger");
