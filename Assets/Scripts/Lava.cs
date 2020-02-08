@@ -15,7 +15,6 @@ public class Lava : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D col) 
     {
-        Debug.Log("Staying...");
         if(col.gameObject.tag == "Player" && !character.isBlinking)
         {
             character.BlinkHurt();
