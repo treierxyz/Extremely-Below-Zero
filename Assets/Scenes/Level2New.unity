@@ -21628,14 +21628,14 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1996121755}
     m_ColliderPaths:
-    - - X: 350000000
-        Y: -20000000
-      - X: 400000000
-        Y: -20000000
-      - X: 400000000
+    - - X: 400000000
         Y: -10000000
       - X: 350000000
         Y: -10000000
+      - X: 350000000
+        Y: -20000000
+      - X: 400000000
+        Y: -20000000
   m_CompositePaths:
     m_Paths:
     - - {x: 40, y: -2}
@@ -21786,9 +21786,21 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 39cb9a555ea5d07ec9907c45be3bc4d8, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: 49786bb6fd51c4b7e9a5187a3584d198, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 5
     m_Data:
@@ -22179,7 +22191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1070926849}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -26306,7 +26318,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1070926849}
         m_MethodName: QuitToMenu
         m_Mode: 1
         m_Arguments:
@@ -26471,7 +26483,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1070926849}
         m_MethodName: QuitToMenu
         m_Mode: 1
         m_Arguments:
