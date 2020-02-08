@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SlowTime : MonoBehaviour
 {
-    public GameObject music;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
+    public AudioSource lazerSource;
+    public AudioSource hurtSource;
 	public float slowDownAmount;
     public float slowDownDuration;
     public float slowDownRemaining;
@@ -16,7 +17,6 @@ public class SlowTime : MonoBehaviour
     void Awake()
     {
         this.fixedUnscaledDeltaTime = Time.fixedUnscaledDeltaTime;
-        audioSource = music.GetComponent<AudioSource>();
         slowDownRemaining = slowDownDuration;
     }
 
@@ -31,12 +31,16 @@ public class SlowTime : MonoBehaviour
                 {
                     Time.timeScale = slowDownAmount;
                     audioSource.pitch = 0.75f;
+                    lazerSource.pitch = 0.75f;
+                    hurtSource.pitch = 0.75f;
                     isSlowTime = true;
                 }
                 else
                 {
                     Time.timeScale = 1.0f;
                     audioSource.pitch = 1.0f;
+                    lazerSource.pitch = 1.0f;
+                    hurtSource.pitch = 1.0f;
                     isSlowTime = false;
                 }
                 Time.fixedDeltaTime = this.fixedUnscaledDeltaTime * Time.timeScale;

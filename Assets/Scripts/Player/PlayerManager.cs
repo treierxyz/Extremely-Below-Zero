@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
     private Flipper flipper;
     public AudioSource audioSource;
     public AudioSource audioSourceDeath;
+    public AudioSource hurtSource;
+    public AudioClip hurtSound;
 
     void Start()
     {
@@ -117,13 +119,14 @@ public class PlayerManager : MonoBehaviour
     {
         //Instantiate(explosion, transform.position, Quaternion.identity);
         health -= damage;
+        hurtSource.PlayOneShot(hurtSound, 1);
     }
     public void BlinkHurt() 
     {
         if(!isBlinking)
         {
             animator.SetTrigger("blinky");
-            health -= 1;
+            TakeDamage(1);
         }
     }
     void DeathMusic()

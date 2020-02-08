@@ -19693,7 +19693,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8633951129408226898, guid: 6d35b655906fb0b5a89cbd1af4794182,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 9e4f6fb7cd36a0139864392058aa15e8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 083317d537ac2504ea349d77d8bce76c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -23340,6 +23340,8 @@ MonoBehaviour:
   canMove: 0
   audioSource: {fileID: 4170874090960999770}
   audioSourceDeath: {fileID: 1499626683}
+  hurtSource: {fileID: 1517742187}
+  hurtSound: {fileID: 8300000, guid: 083317d537ac2504ea349d77d8bce76c, type: 3}
 --- !u!114 &3265709885643281719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23385,8 +23387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a6c1c6555461140b56aefc56694def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 4170874090960999771}
-  slowDownAmount: 0.5
+  audioSource: {fileID: 4170874090960999770}
+  lazerSource: {fileID: 1188732584}
+  hurtSource: {fileID: 1517742187}
+  slowDownAmount: 0.3
   slowDownDuration: 5
   slowDownRemaining: 0
   isSlowTime: 0
