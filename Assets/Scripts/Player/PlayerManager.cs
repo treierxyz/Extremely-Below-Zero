@@ -39,7 +39,8 @@ public class PlayerManager : MonoBehaviour
             dead = true;
             DeathMusic();
         }
-
+        // Jumping
+        isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
         // Normal movement
         if (canMove)
         {
@@ -49,9 +50,6 @@ public class PlayerManager : MonoBehaviour
             {
                 rb.velocity = new Vector2(moveBy, rb.velocity.y);
             }
-
-            // Jumping
-            isGrounded = Physics2D.OverlapCircle(groundTest.position, checkRadius, ground);
         }
         else
         {
