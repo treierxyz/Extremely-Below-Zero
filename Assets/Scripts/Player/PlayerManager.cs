@@ -75,7 +75,14 @@ public class PlayerManager : MonoBehaviour
                 rb.AddForce(jumpHeight * transform.up, ForceMode2D.Impulse);
                 isGrounded = false;
             }
-            
+        }
+        if (isGrounded)
+        {
+            animator.SetBool("jump", false);
+        }
+        else
+        {
+            animator.SetBool("jump", true);
         }
 		//Kill key
         if (Input.GetKeyDown(KeyCode.K))
@@ -87,12 +94,26 @@ public class PlayerManager : MonoBehaviour
 		{
 			animator.SetFloat("speedBack", Mathf.Abs(rb.velocity.x));
 			animator.SetFloat("speed", 0);
+            animator.SetBool("left", true);
+            animator.SetBool("right", false);
 		}
         else
 		{
 			animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
 			animator.SetFloat("speedBack", 0);
+            animator.SetBool("left", false);
+            animator.SetBool("right", true);
 		}
+        if (flipper.m_FacingRight)
+        {
+            animator.SetBool("left", false);
+            animator.SetBool("right", true);
+        }
+        else
+        {
+            animator.SetBool("left", true);
+            animator.SetBool("right", false);
+        }
     }
     public void TakeDamage(int damage) 
     {
