@@ -23310,6 +23310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 2280405197178042716}
   character: {fileID: 3265709885643281714}
+  hand: {fileID: 3265709885879735605}
   animator: {fileID: 3265709885643281723}
   timer: {fileID: 5066108586726607956}
   mainUIOverlay: {fileID: 5066108587205257390}

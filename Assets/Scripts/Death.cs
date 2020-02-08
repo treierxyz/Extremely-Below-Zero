@@ -6,6 +6,7 @@ public class Death : MonoBehaviour
 {
     public GameObject deathScreen;
     public GameObject character;
+    public GameObject hand;
     private SlowTime slowTime;
     private PlayerManager playerManager;
     private Rotator rotator;
@@ -33,14 +34,16 @@ public class Death : MonoBehaviour
         {
             timer.canCount = false;
             animator.SetFloat("speed", 0f);
+            animator.SetTrigger("dead");
             slowTime.enabled = false;
             playerManager.enabled = false;
             rotator.enabled = false;
             weapon.enabled = false;
             flipper.enabled = false;
+            hand.SetActive(false);
             mainUIOverlay.SetActive(false);
             deathScreen.SetActive(true);
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             doOnce = true;
         }
     }
