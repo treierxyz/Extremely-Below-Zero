@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody2D rb;
     public float jumpHeight;
     private bool isGrounded;
+    public bool isBlinking;
     public Transform groundTest;
     public float checkRadius;
     public LayerMask ground;
@@ -56,6 +57,14 @@ public class PlayerManager : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+        if(animator.GetCurrentAnimatorStateInfo(1).IsName("blinkAnim"))
+        {
+            isBlinking = true;
+        }
+        else
+        {
+            isBlinking = false;
+        }
     }
     void Update()
     {
@@ -89,6 +98,14 @@ public class PlayerManager : MonoBehaviour
     {
         //Instantiate(explosion, transform.position, Quaternion.identity);
         health -= damage;
+    }
+    public void BlinkHurt() 
+    {
+        if(!isBlinking)
+        {
+            animator.SetTrigger("blinky");
+            health -= 1;
+        }
     }
     void DeathMusic()
     {

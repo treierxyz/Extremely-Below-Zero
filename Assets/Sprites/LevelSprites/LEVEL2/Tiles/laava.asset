@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: bgtile
+  m_Name: laava
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1929834416523346238, guid: c0211f4565e382e65ab2138574776edc,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49786bb6fd51c4b7e9a5187a3584d198, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
