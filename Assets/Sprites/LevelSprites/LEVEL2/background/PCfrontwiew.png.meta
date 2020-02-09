@@ -8,6 +8,45 @@ TextureImporter:
   - first:
       213: 2568719692268420462
     second: PCfrontwiew_1
+  - first:
+      213: -13083874903041634
+    second: PCfrontwiew_2
+  - first:
+      213: -8733923441878844391
+    second: PCfrontwiew_3
+  - first:
+      213: 1231254463762779361
+    second: PCfrontwiew_4
+  - first:
+      213: 6265543779058341554
+    second: PCfrontwiew_5
+  - first:
+      213: 4482941309226916221
+    second: PCfrontwiew_6
+  - first:
+      213: 3372636996248199618
+    second: PCfrontwiew_7
+  - first:
+      213: -8546117252118978621
+    second: PCfrontwiew_8
+  - first:
+      213: 7803251215987601637
+    second: PCfrontwiew_9
+  - first:
+      213: -7189125676313419254
+    second: PCfrontwiew_10
+  - first:
+      213: 6082409014689843571
+    second: PCfrontwiew_11
+  - first:
+      213: -5134074542302695070
+    second: PCfrontwiew_12
+  - first:
+      213: 6853065705934521797
+    second: PCfrontwiew_13
+  - first:
+      213: -3984021309565461162
+    second: PCfrontwiew_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +85,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +141,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PCfrontwiew_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a250ec10ea331f060800000000000000
+      internalID: 6985421319475954986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCfrontwiew_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6db53153fce5a320800000000000000
+      internalID: 2568719692268420462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCfrontwiew_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e995e1cf84481dff0800000000000000
+      internalID: -13083874903041634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCfrontwiew_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cba5767eedac680800000000000000
+      internalID: -8733923441878844391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
