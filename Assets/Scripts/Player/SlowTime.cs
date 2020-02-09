@@ -58,6 +58,8 @@ public class SlowTime : MonoBehaviour
         {
             Time.timeScale = 1.0f;
             audioSource.pitch = 1.0f;
+            lazerSource.pitch = 1.0f;
+            hurtSource.pitch = 1.0f;
             isSlowTime = false;
         }
         if (slowDownRemaining <= slowDownDuration && !isSlowTime && !pauseMenu.gameIsPausedPublic)

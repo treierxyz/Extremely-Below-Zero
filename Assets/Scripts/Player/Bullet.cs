@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         }
 
 
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        transform.Translate(Vector2.down * speed * Time.fixedDeltaTime);
     }
 
     void DestroyProjectile() 

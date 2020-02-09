@@ -20,6 +20,10 @@ public class SettingsMenu : MonoBehaviour
     private Slider sfxSlider;
     private float musicVolume = 0.0f;
     private float soundVolume = 0.0f;
+    public Toggle musictoggle;
+    public Toggle sfxtoggle;
+    private float audioOld;
+    private float sfxOld;
     Resolution[] resolutions;
     // Start is called before the first frame update
     void Start()
@@ -65,6 +69,16 @@ public class SettingsMenu : MonoBehaviour
         //Quality
         int qualityLevel = QualitySettings.GetQualityLevel();
         qualityDropdown.value = qualityLevel;
+        audioMixer.GetFloat("musicVolume", out audioOld);
+        audioMixer.GetFloat("sfxVolume", out sfxOld);
+        if (audioOld == -80.0f)
+        {
+            musictoggle.isOn = true;
+        }
+        if (sfxOld == -80.0f)
+        {
+            sfxtoggle.isOn = true;
+        }
     }
 
     public void SetMusicVolume(float volume)
@@ -89,7 +103,7 @@ public class SettingsMenu : MonoBehaviour
         {
             musSlider.interactable = true;
             musicFill.SetActive(true);
-            audioMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
+            audioMixer.SetFloat("musicVolume", musicVolume);
         }
     }
     public void MuteSFX(bool muted)
@@ -104,7 +118,7 @@ public class SettingsMenu : MonoBehaviour
         {
             sfxSlider.interactable = true;
             soundFill.SetActive(true);
-            audioMixer.SetFloat("sfxVolume", Mathf.Log10(soundVolume) * 20);
+            audioMixer.SetFloat("sfxVolume", soundVolume);
         }
     }
     public void SetQuality (int qualityIndex)

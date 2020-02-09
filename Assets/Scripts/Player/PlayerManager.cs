@@ -118,16 +118,18 @@ public class PlayerManager : MonoBehaviour
     }
     public void TakeDamage(int damage) 
     {
-        //Instantiate(explosion, transform.position, Quaternion.identity);
-        health -= damage;
-        hurtSource.PlayOneShot(hurtSound, 1);
+        if(!isBlinking)
+        {
+            health -= damage;
+            hurtSource.PlayOneShot(hurtSound, 1);
+        }
     }
     public void BlinkHurt() 
     {
         if(!isBlinking)
         {
-            animator.SetTrigger("blinky");
             TakeDamage(1);
+            animator.SetTrigger("blinky");
         }
     }
     void DeathMusic()
