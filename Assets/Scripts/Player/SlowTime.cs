@@ -61,6 +61,7 @@ public class SlowTime : MonoBehaviour
             lazerSource.pitch = 1.0f;
             hurtSource.pitch = 1.0f;
             isSlowTime = false;
+            Time.fixedDeltaTime = this.fixedUnscaledDeltaTime * Time.timeScale;
         }
         if (slowDownRemaining <= slowDownDuration && !isSlowTime && !pauseMenu.gameIsPausedPublic)
         {
