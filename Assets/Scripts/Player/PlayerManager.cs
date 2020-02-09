@@ -39,6 +39,7 @@ public class PlayerManager : MonoBehaviour
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             //Destroy(gameObject);
             dead = true;
+            rb.velocity = new Vector2(0, 0);
             DeathMusic();
         }
         // Jumping
