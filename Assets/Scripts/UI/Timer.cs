@@ -27,10 +27,11 @@ public class Timer : MonoBehaviour
     {
         if (canCount && !pauseMenu.gameIsPausedPublic)
         {
-            t = Time.unscaledTime - startTime + tOld;
-            string minutes = ((int) Mathf.Floor(t) / 60).ToString("00");
-            string seconds = (t % 60).ToString("00.000", nfi);
-            timeInHRF = minutes + ":" + seconds;
+            t = (Time.unscaledTime - startTime + tOld) * 1000;
+            string minutes = ((int) Mathf.Floor(t/60000)).ToString("00");
+            string seconds = ((int) Mathf.Floor(t/1000 % 60)).ToString("00", nfi);
+            string millis = ((int) Mathf.Floor(t % 1000)).ToString("000", nfi);
+            timeInHRF = "<mspace=0.6em>" + minutes + "</mspace>" + ":" + "<mspace=0.6em>" + seconds + "</mspace>" + "." + "<mspace=0.6em>" + millis + "</mspace>";
             timerText.text = timeInHRF;
         }
         else
